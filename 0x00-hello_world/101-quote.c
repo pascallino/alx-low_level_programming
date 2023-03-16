@@ -2,8 +2,8 @@
 
 /**
  * main - Entry point
- * Description: prints stderr output 
- * Return: 0
+ * Description:stderr output
+ *  Return: 0
  */
 int main(void)
 {
