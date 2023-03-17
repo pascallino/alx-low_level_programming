@@ -18,5 +18,6 @@ putchar(',');
 putchar(' ');
 i++;
 }
+putchar((char)'\n');
 return (0);
 }
