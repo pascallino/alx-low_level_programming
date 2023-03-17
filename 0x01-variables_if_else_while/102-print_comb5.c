@@ -3,7 +3,7 @@
 /**
  * main - Entyr point
  * Description: prints two digits combination
- * Return: Always 0 (success)
+ * Return: Always.  0 (success)
  */
 int main(void)
 {
@@ -16,6 +16,9 @@ for (b = '0'; b <= '9'; b++)
 for (c = '0'; c <= '9'; c++)
 {
 for (i = '0'; i <= '9'; i++)
+{
+
+if (((k + j) > (c + i) &&  k >= c) || c < k)
 {
 putchar(a);
 putchar(b);
@@ -36,8 +39,8 @@ putchar(' ');
 }
 }
 }
+}
 putchar((char) '\n');
 return (0);
 }
-
 
