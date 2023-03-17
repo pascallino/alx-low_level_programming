@@ -14,8 +14,8 @@ putchar((char)i);
 if (!(i >= 57))
 {
 putchar(',');
-}
 putchar(' ');
+}
 i++;
 }
 putchar((char)'\n');
