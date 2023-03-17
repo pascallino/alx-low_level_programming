@@ -18,7 +18,7 @@ for (c = '0'; c <= '9'; c++)
 for (i = '0'; i <= '9'; i++)
 {
 
-if (((k + j) > (c + i) &&  k >= c) || c < k)
+if (((c + i) > (a + b) &&  c >= a) || a < c)
 {
 putchar(a);
 putchar(b);
