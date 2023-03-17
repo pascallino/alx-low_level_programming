@@ -11,12 +11,12 @@ int i = 48;
 while (i <= 57)
 {
 putchar((char)i);
-if (i != 57)
+if (i >= 56)
 {
 putchar(',');
 putchar(' ');
-i++;
 }
+i++;
 }
 return (0);
 }
