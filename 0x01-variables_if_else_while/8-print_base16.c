@@ -8,13 +8,13 @@
 int main(void)
 {
 int i = 48;
-while (i <= 66)
+while (i <= 102)
 {
-if (i > 48 && i <= 57)
+if (i >= 48 && i <= 57)
 {
 putchar((char) i);
 }
-else if (i  <= 66)
+if (i >= 97 && i <= 102)
 {
 putchar((char) i);
 }
