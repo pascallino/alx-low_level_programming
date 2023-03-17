@@ -8,10 +8,10 @@
 int main(void)
 {
 int i = 122;
-while (i <= 97)
+while (i >= 97)
 {
 putchar((char) i);
-i++;
+i--;
 }
 putchar((char)'\n');
 return (0);
