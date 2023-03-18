@@ -1,5 +1,3 @@
-
-(29 sloc)  431 Bytes
 #include <stdio.h>
 #include <unistd.h>
 /**
