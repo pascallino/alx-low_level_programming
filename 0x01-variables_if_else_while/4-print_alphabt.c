@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <unistd.h>
 /**
@@ -8,16 +7,15 @@
  */
 int main(void)
 {
-	int ch;
-
-	for (ch = 'a'; ch <= 'z'; ch++)
-	{
-if (ch == 'a' || ch == 'e')
+int ch;
+for (ch = 'a'; ch <= 'z'; ch++)
+{
+if (ch == 'q' || ch == 'e')
 {
 continue;
 }
 putchar(ch);
-	}
+}
 putchar('\n');
 return (0);
 }
