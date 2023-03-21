@@ -25,16 +25,16 @@ for (k = 0; k <= 5; k++)
 {
 for (l = 0; l <= 9; l++)
 {
+if (i == 2 && j == 3 && k == 5 && l == 9)
+{
+break;
+}
 _putchar(i + '0');
 _putchar(j + '0');
 _putchar(':');
 _putchar(k + '0');
 _putchar(l + '0');
 _putchar('\n');
-if (i == 2 && j == 3 && k == 5 && l == 9)
-{
-break;
-}
 }
 }
 }
