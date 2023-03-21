@@ -9,8 +9,7 @@
 int main(void)
 {
 
-	int x, y;
-	int i;
+	
 	long num1, num2;
 	long  sum, even;
 
