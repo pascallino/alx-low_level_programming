@@ -17,7 +17,7 @@ n = n * -1;
 m = n % 10;
 return (m);
 }
-	if (n >= 0 && n <= 9)
+	if (n >= 0 || n <= 9)
 	{
 		return (0);
 	}
