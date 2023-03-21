@@ -8,12 +8,9 @@
 
 int main(void)
 {
-
-	
 	long num1, num2;
 	long  sum, even;
 
-	
 	num1 = 0;
 	num2 = 1;
 	sum = 0;
