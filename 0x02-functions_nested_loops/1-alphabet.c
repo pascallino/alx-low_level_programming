@@ -2,23 +2,23 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- * Description: prints a-z
- * Return: 0
+ * print_alphabet - Entry point
+ * Description: a function that prints the alphabet,
+ * in lowecase followed by a new line
+ * Return: void
  */
+
+/*Description: print_alphabet*/
 void print_alphabet(void)
 {
-int i ;
+
+int i;
 i = 97;
-while(i <= 122)
-{
-_putchar(i);
-i++;
-}
-_putchar('\n');
-}
-int main(void)
-{
-	print_alphabet();
-	return (0);
+
+	while (i <= 122)
+	{
+		_putchar(i);
+		i++;
+	}
+	_putchar('\n');
 }
