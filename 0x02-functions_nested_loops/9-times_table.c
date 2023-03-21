@@ -30,9 +30,8 @@ void my_putchar(long var)
 void times_table(void)
 {
 
-int i, j, t;
+int i, j;
 long v;
-t = 0;
 
 for (i = 0; i <= 9; i++)
 {
