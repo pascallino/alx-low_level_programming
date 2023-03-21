@@ -21,8 +21,10 @@ return (m);
 	{
 		return (0);
 	}
-
+if (n > 9)
+{
 m = n % 10;
 _putchar(m + '0');
-	return (m);
+}
+	return (0);
 }
