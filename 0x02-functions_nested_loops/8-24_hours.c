@@ -31,6 +31,10 @@ _putchar(':');
 _putchar(k + '0');
 _putchar(l + '0');
 _putchar('\n');
+if (i + j + k + l == 18)
+{
+break;
+;
 }
 }
 }
