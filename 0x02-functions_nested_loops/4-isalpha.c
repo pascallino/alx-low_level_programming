@@ -7,7 +7,7 @@
  * Return: 1 if true. 0 if false.
  */
 
-int _islower(int c)
+int _isalpha(int c)
 {
 int i;
 i = c;
