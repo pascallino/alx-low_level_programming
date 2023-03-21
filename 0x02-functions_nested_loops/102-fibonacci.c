@@ -8,7 +8,7 @@
 
 int main(void)
 {
-Int i;
+int i;
 long num1, num2;
 long  sum;
 
