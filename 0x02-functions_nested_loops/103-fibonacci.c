@@ -17,7 +17,7 @@ int main(void)
 	num1 = 0;
 	num2 = 1;
 	sum = 0;
-	even = 2;
+	even = 0;
 	while (sum < 4000000)
 	{
 	sum = num1 + num2;
