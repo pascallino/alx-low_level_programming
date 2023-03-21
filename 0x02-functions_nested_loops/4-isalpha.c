@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _islower - Entry point
+ * _isalpha - Entry point
  * Description: checks is a character is lowercase
  * @c: the integer value it receives
  * Return: 1 if true. 0 if false.
