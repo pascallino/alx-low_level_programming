@@ -1,27 +1,28 @@
 #include <stdio.h>
-/**                                        * times_table - Entry point               * Description: prints a-z                 * Return: 0
-*/
 
+/**
+ * main - Prints the sum of all multiples of 3 or 5 up to 102
+ * Return: Always (Success)
+ */
 
 int main(void)
 {
-
-        int i;
-        i = 1;
+	int i;
 	long sum;
 
-        while (i <= 1023)
-        {
-                if (i % 3 == 0)
-{
-	sum +=i;
-}
-                else if (i % 5 == 0)
-                {
-		sum+=i;
-                }
-                i++;
-        }
+	i = 1;
+	while (i <= 1023)
+	{
+		if (i % 3 == 0)
+		{
+			sum += i;
+		}
+		else if (i % 5 == 0)
+		{
+			sum += i;
+		}
+		i++;
+	}
 	printf("%ld\n", sum);
-        return (0);
+	return (0);
 }
