@@ -1,10 +1,11 @@
 #include "main.h"
-#include <stdio.h>
+#include <stdio.>
+
 /**
- * _isabs - Entry point
- * Description: checks for abeolute value
- * @c: the integer value it receives
- * Return: 1 if true. 0 if false.
+ * _abs - Entry point
+ * @n: n is an integer
+ * Description: prints the absolute value of an integer
+ * Return: int
  */
 
 int _abs(int n)
@@ -15,11 +16,7 @@ int _abs(int n)
 	}
 	else if (n < 0)
 	{
-		return(1 * -1);
+		return (-n);
 	}
-	return (0);
-}
-int main(void)
-{
 	return (0);
 }
