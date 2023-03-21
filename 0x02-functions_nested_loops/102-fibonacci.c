@@ -8,8 +8,9 @@
 
 int main(void)
 {
-	long num1, num2;
-	long  sum;
+Int I;
+long num1, num2;
+long  sum;
 
 	i = 1;
 	num1 = 1;
