@@ -2,30 +2,30 @@
 
 /**
  * print_diagonal - Entry point
- * Description: diagonal
+ * Description: checks is a character
  * @c: the integer value it receives
  * Return: 1 if true. 0 if false.
  */
 
 void print_diagonal(int c)
 {
-	int size, i, j;
+	int i, j, size;
 
 	size = c;
-	if (!(c == 0))
+
+	if (!(size <= 0))
 	{
-		for (i = 0; i <= size; i++)
+		for (i = 0; i < size; i++)
 		{
-			for (j = 0; j <= size; j++)
+			for (j = 0; j < size; j++)
 			{
-if (i < j)
-{
-_putchar(' ');
-}
-}
-_putchar('\\');
-_putchar('\n');
-}
+				if (j == i)
+					_putchar('\\');
+				else
+					_putchar(' ');
+			}
+			_putchar('\n');
+		}
 	}
 	else
 	{
