@@ -8,7 +8,7 @@
  * Description2: last digit
 */
 
-void my_putchar(int var)
+void my_output(int var)
 {
 	if (var < 0)
 	{
@@ -17,7 +17,7 @@ void my_putchar(int var)
 	}
 	if ((var / 10))
 	{
-		my_putchar(var / 10);
+		my_output(var / 10);
 	}
 	_putchar(var % 10 + '0');
 }
@@ -31,6 +31,6 @@ void my_putchar(int var)
 
 void print_number(int c)
 {
-my_putchar(c);
+my_output(c);
 
 }
