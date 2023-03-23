@@ -15,7 +15,9 @@ void my_putchar(int var)
 	_putchar('-');
 	var = var * -1;
 	}
-	if (var / 10)
+	if (var == 0)
+		_putchar('0');
+	if ((var / 10) && !(var == 0))
 		my_putchar(var / 10);
 	_putchar(var % 10 + '0');
 }
