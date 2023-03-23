@@ -1,24 +1,6 @@
 #include "main.h"
 
 /**
- * my_output - returns the 9 times table
- * Description: var print
- * @var: varholds the last digit
- * Description2: last digit
-*/
-
-void my_output(unsigned int var)
-{
-	if (var < 0)
-	{
-	_putchar(45);
-	var = var * -1;
-	}
-my_output(var / 10);
-_putchar(var % 10 + '0');
-}
-
-/**
  * print_number - prints the numbers
  * Description: prints the 9 times table
  * @c: holds the number
@@ -27,5 +9,12 @@ _putchar(var % 10 + '0');
 
 void print_number(int c)
 {
-my_output(c);
+
+if (var < 0)
+	{
+	_putchar(45);
+	c = c * -1;
+	}
+print_number(c / 10);
+_putchar(c % 10 + '0');
 }
