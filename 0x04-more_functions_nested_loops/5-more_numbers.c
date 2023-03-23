@@ -1,19 +1,19 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * my_putchar - returns the 9 times table
+ * my_output - returns the 9 times table
  * Description: var print
  * @var: varholds the last digit
  * Description2: last digit
 */
-void my_putchar(long var)
+void my_output(long var)
 {
 	if (var < 0)
 	{
 	var = var * -1;
 	}
 	if (var / 10)
-		my_putchar(var / 10);
+		my_output(var / 10);
 	_putchar(var % 10 + '0');
 }
 
@@ -39,7 +39,7 @@ _putchar((char)j++);
 }
 else
 {
-my_putchar(i);
+my_output(i);
 }
 i++;
 }
