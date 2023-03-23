@@ -11,7 +11,7 @@ void my_output(int var)
 {
 	if (var < 0)
 	{
-	_putchar('-');
+	_putchar(45);
 	var = var * -1;
 	}
 	if ((var / 10))
@@ -31,5 +31,4 @@ void my_output(int var)
 void print_number(int c)
 {
 my_output(c);
-_putchar(' ');
 }
