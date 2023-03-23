@@ -2,8 +2,7 @@
 
 /**
  * print_square - Entry point
- * Description: checks is a character is u
- ppercase
+ * Description: checks is a character
  * @c: the integer value it receives
  * Return: 1 if true. 0 if false.
  */
