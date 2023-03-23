@@ -14,12 +14,8 @@ void my_output(unsigned int var)
 	_putchar(45);
 	var = var * -1;
 	}
-	if ((var / 10))
-	{
 my_output(var / 10);
 _putchar(var % 10 + '0');
-}
-
 }
 
 /**
