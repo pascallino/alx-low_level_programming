@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "main.h"
 /**
  * print_most_numbers - Entry point
  * Description: prints 0 to 9
@@ -10,11 +10,10 @@ void print_most_numbers(void)
 int i = 48;
 while (i <= 57)
 {
-if (i == 50 || i == 52)
+if (i != 50 && i != 52)
 {
-	continue;
+putchar((char)i);
 }
-putchar((char) i);
 i++;
 }
 putchar((char)'\n');
