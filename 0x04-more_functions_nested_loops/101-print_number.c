@@ -31,5 +31,5 @@ void my_output(int var)
 void print_number(int c)
 {
 my_output(c);
-
+_putchar(' ');
 }
