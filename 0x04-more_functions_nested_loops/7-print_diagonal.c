@@ -1,34 +1,28 @@
 #include "main.h"
 
 /**
- * print_diagonal - Entry point
- * Description: checks is a character
- * @c: the integer value it receives
- * Return: 1 if true. 0 if false.
+ * print_diagonal - diagonal lines made of backslashes
+ * @n: number of \ to be printed
+ * Return: void
  */
 
-void print_diagonal(int c)
+void print_diagonal(int n)
 {
-	int i, j, size;
+	int i = 0, ii;
 
-	size = c;
-
-	if (!(size <= 0))
+	while (i < n && n > 0)
 	{
-		for (i = 0; i < size; i++)
+		ii = 0;
+		while (ii < i)
 		{
-			for (j = 0; j < size; j++)
-			{
-				if (j == i)
-					_putchar('\\');
-				else
-					_putchar(' ');
-			}
-			_putchar('\n');
+			_putchar(' ');
+			ii++;
 		}
-	}
-	else
-	{
+
+		_putchar('\\');
 		_putchar('\n');
+		i++;
 	}
+	if (i == 0)
+		_putchar('\n');
 }
