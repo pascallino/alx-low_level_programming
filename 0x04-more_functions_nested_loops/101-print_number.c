@@ -1,20 +1,21 @@
 #include "main.h"
-
 /**
- * print_number - prints the numbers
- * Description: prints the 9 times table
- * @c: holds the number
- * Return: void
+ * print_number - prints numbers
+ * @n: number to be printed
+ * Return:void
  */
 
-void print_number(int c)
+void print_number(int n)
 {
+	unsigned int x;
 
-if (var < 0)
+	x = n;
+	if (n < 0)
 	{
-	_putchar(45);
-	c = c * -1;
+		_putchar(45);
+		x = -n;
 	}
-print_number(c / 10);
-_putchar(c % 10 + '0');
+	if (x / 10)
+		print_number(x / 10);
+	_putchar((x % 10) + '0');
 }
