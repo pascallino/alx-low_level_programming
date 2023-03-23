@@ -10,8 +10,7 @@ void my_putchar(long var)
 {
 	if (var < 0)
 	{
-	
-		var = var * -1;
+	var = var * -1;
 	}
 	if (var == 0)
 		_putchar('0');
@@ -27,8 +26,7 @@ void my_putchar(long var)
 
 void more_numbers(void)
 {
-
-int i, j, k; 
+	int i, j, k;
 
 k = 1;
 while (k <= 10)
