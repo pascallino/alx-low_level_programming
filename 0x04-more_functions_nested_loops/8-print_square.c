@@ -22,7 +22,10 @@ void print_square(int c)
 			{
 			_putchar('#');
 			}
+			if (i < size)
+			{
 			_putchar('\n');
+			}
 		}
 	}
 	else
