@@ -1,8 +1,7 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * my_putchar - returns the 9 times table
+ * my_output - returns the 9 times table
  * Description: var print
  * @var: varholds the last digit
  * Description2: last digit
