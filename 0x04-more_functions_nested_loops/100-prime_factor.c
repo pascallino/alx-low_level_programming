@@ -7,20 +7,18 @@
  */
 int main(void)
 {
-    int count;
-long long int num;
+	int count;
+	long long int num;
 
-num = 612852475143;
-/*printf("\nPrime Factors of %lld are ..\n", num);*/
-    for(count = 2; num > 1; count++)
-    {
-        while(num % count == 0)
-        {
-        /*    printf("%d ", count); */
-            num = num / count;
-        }
-    }
-    printf("%d ", count-1);
-    printf("\n");
-    return (0);
+	num = 612852475143;
+	for (count = 2; num > 1; count++)
+	{
+		while (num % count == 0)
+		{
+			num = num / count;
+		}
+	}
+	printf("%d", count - 1);
+	printf("\n");
+	return (0);
 }
