@@ -16,9 +16,10 @@ void puts2(char *str)
 		i++;
 	}
 k = 1;
+printf("%c", str[0]);
 	for (h = 0; h <= i; h++)
 	{
-		if (k % 2 == 0)
+		if (h % 2 == 0 && h != 0)
 		{
 			printf("%c", str[h]);
 		}
