@@ -18,6 +18,14 @@ int j = 0;
 
 for (i = j; s[i] != '\0'; i++)
 {
+if (res > 0 || res < 0 && (str[i] >= 'a' && str[i] <= 'z'))
+{
+if (res < 0) 
+{
+return (-res);
+} 
+return res;
+}
 if (((char)s[i] >= 48 && (char)s[i] <= 57) || s[i] == '-')
 {
 	if (s[i] == '-')
