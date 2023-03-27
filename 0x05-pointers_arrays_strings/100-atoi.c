@@ -12,7 +12,7 @@ int _atoi(char *s)
 
 	int sign = 1;
 	int i = 0;
-	unsigned int res = 0;
+int res = 0;
 int j = 0;
 
 
