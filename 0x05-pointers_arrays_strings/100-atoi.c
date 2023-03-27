@@ -12,13 +12,13 @@ int _atoi(char *s)
 
 	int sign = 1;
 	int i = 0;
-int res = 0;
+unsigned int res = 0;
 int j = 0;
 
 
 for (i = j; s[i] != '\0'; i++)
 {
-if ((res > 0 || res < 0) && (s[i] >= 'a' && s[i] <= 'z'))
+if ((res > -1 || res <= -1) && (s[i] >= 'a' && s[i] <= 'z'))
 {
 if (res < 0) 
 {
