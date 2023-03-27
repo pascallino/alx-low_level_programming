@@ -20,11 +20,8 @@ for (i = j; s[i] != '\0'; i++)
 {
 if ((res > 0) && (s[i] >= 'a' && s[i] <= 'z'))
 {
-if (res < 0) 
-{
-return (-res);
-} 
 return res;
+break;
 }
 if (((char)s[i] >= 48 && (char)s[i] <= 57) || s[i] == '-')
 {
