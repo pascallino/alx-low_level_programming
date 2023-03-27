@@ -18,7 +18,7 @@ int j = 0;
 
 for (i = j; s[i] != '\0'; i++)
 {
-if ((res > 0 || res < 0) && (str[i] >= 'a' && str[i] <= 'z'))
+if ((res > 0 || res < 0) && (s[i] >= 'a' && s[i] <= 'z'))
 {
 if (res < 0) 
 {
