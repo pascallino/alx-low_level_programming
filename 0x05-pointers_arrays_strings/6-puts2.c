@@ -8,21 +8,21 @@
 
 void puts2(char *str)
 {
-	int i;
+	int i, k;
 	int h;
 
 	while (str[i] != '\0')
 	{
 		i++;
 	}
-i = 1;
+k = 1;
 	for (h = 0; h < i; h++)
 	{
-		if (i % 2 == 0)
+		if (k % 2 == 0)
 		{
 			printf("%c", str[h]);
 		}
-i++;
+k++;
 	}
 	printf("\n");
 }
