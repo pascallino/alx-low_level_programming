@@ -18,7 +18,7 @@ void puts2(char *str)
 
 	for (h = 0; h < i; h++)
 	{
-		if (h % 2 == 0)
+		if (h % (h + 1) == 0)
 		{
 			printf("%c", str[h]);
 		}
