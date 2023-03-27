@@ -11,13 +11,13 @@ void puts2(char *str)
 	int i, k;
 	int h;
 
-	while (str[i] != '\0')
+	while (str[i])
 	{
 		i++;
 	}
 k = 1;
 printf("%c", str[0]);
-	for (h = 0; h <= i; h++)
+	for (h = 0; h < i; h++)
 	{
 		if (h % 2 == 0 && h != 0)
 		{
