@@ -16,10 +16,9 @@ i = 0;
 		i++;
 	}
 k = 1;
-printf("%c", str[0]);
 	for (h = 0; h < i; h++)
 	{
-		if (h % 2 == 0 && h != 0)
+		if (h % 2 == 0)
 		{
 			printf("%c", str[h]);
 		}
