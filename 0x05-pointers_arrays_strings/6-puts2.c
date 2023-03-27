@@ -15,13 +15,14 @@ void puts2(char *str)
 	{
 		i++;
 	}
-
+i = 1;
 	for (h = 0; h < i; h++)
 	{
-		if (h % (h + 1) == 0)
+		if (i % 2 == 0)
 		{
 			printf("%c", str[h]);
 		}
+i++;
 	}
 	printf("\n");
 }
