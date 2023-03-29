@@ -26,7 +26,7 @@ j++;
 j++;
 if (n > j)
 {
-while (j <= n)
+while (j < n)
 {
 dest[j] = '\0';
 j++;
