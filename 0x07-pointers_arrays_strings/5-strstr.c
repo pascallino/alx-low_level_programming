@@ -8,42 +8,25 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int j = 0;
-	int k = 0;
-	int pos = 0;
+	/**
+	 * we initialize a helping variable
+	 * to assist in returning one of
+	 * our parameters pointers haystack
+	*/
+	char *h, *n;
 
-	while (*(needle + k))
-		k++;
-
-	while (*(haystack))
+	while (*haystack != '\0')
 	{
-		j = 0;
-		while (*(needle + j))
+		h = haystack;
+		n = needle;
+		while (*n != '\0' && *haystack == *n)
 		{
-			if (*haystack == ' ' && k != pos)
-			{
-				pos = 0;
-		/*	flg = 0;*/
-				break;
-			}
-			if (needle[j] == *haystack)
-			{
-				pos++;
-			if (k == pos)
-				{
-		/*	flg = 1; */
-			break;
-				}
-				return (haystack);
-			}
-			else
-			{
-				pos = 0;
-				break;
-			}
-			j++;
+			haystack++;
+			n++;
 		}
+		if (!*n)
+			return (h);
 		haystack++;
 	}
-	return (NULL);
+	return ('\0');
 }
