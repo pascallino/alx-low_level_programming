@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include <stdio.h>
 /**
  * is_palindrome - Checks if a string is a palindrome.
  * @s: The string to be checked.
@@ -20,19 +21,23 @@ int is_palindrome(char *s)
 		}
 		else
 		{
+			printf("%d %d", len, size - 1);
 			if (len == (size - 1))
 			{
+				printf("po");
 				return (1);
 			}
-		}
+		
 		len++;
-	}
+	
 	len = len + is_palindrome(s + 1);
+		}
+		}
 	if (len < (size - 1))
 	{
 		return (len);
 	}
 	else
-		return (1);
+		return (0);
 
 }
