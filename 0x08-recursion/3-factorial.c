@@ -7,7 +7,7 @@
  * If n < 0 - 1 to indicate an error.
  */
 
-int  fact = 1;
+
 int factorial(int n)
 {
 	int store = n;
@@ -22,5 +22,4 @@ int factorial(int n)
 	}
 store = store * factorial(n - 1);
 return (store);
-fact = 1;
 }
