@@ -12,7 +12,7 @@ int factorial(int n)
 {
 	int store = n;
 
-	if (n < 0 ) 
+	if (n < 0)
 	{
 		return (-1);
 	}
@@ -20,6 +20,6 @@ int factorial(int n)
 	{
 		return (1);
 	}
-store = store * factorial(n - 1);
+store *=  factorial(n - 1);
 return (store);
 }
