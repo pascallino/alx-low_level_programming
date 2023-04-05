@@ -1,6 +1,9 @@
 #include "main.h"
 #include <string.h>
 #include <stdio.h>
+
+int checkpalindrome(int lenght, int size_n, char *s);
+
 /**
  * is_palindrome - Checks if a string is a palindrome.
  * @s: The string to be checked.
@@ -8,36 +11,43 @@
  * Return: If the string is a palindrome - 1.
  *         If the string is not a palindrome - 0.
  */
+
 int is_palindrome(char *s)
 {
 	int size = strlen(s);
-	int len = 0;
+
+	return (checkpalindrome(0, size, s));
+}
+
+/**
+ * checkpalindrome - Checks if a string is a palindrome.
+ * Description: return value for palindrome
+ * @s: The string to be checked.
+ * @lenght: int len of strings
+ * @size_n: int size
+ * Return: If the string is a palindrome - 1.
+ */
+
+int checkpalindrome(int lenght, int size_n, char *s)
+{
+	int len = lenght;
+	int size = size_n;
 
 	if (*s != '\0')
 	{
-		if (s[len] != s[size - len - 1])
+		if (s[len] != s[size - 1])
 		{
 			return (0);
 		}
 		else
 		{
-			printf("%d %d", len, size - 1);
-			if (len == (size - 1))
+			if ((size - 1 - len == 1) || (size - 1 - len == 2))
 			{
-				printf("po");
 				return (1);
 			}
-		
-		len++;
-	
-	len = len + is_palindrome(s + 1);
 		}
-		}
-	if (len < (size - 1))
-	{
-		return (len);
+		size -= 1;
+		return (checkpalindrome(len + 1, size, s));
 	}
-	else
-		return (0);
-
+	return (1);
 }
