@@ -13,7 +13,7 @@ int count = y;
 
 if (count >= 1)
 {
-result = result * _pow_recursion(x, y - 1);
+result *= _pow_recursion(x, y - 1);
 return (result);
 }
 if (y == 0)
