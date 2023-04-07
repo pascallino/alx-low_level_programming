@@ -11,7 +11,6 @@
 int main(int argc, char *argv[])
 {
 	int change;
-	int cents[] = {25, 10, 5, 2, 1};
 	int i, k = 0;
 
 	if (argc != 2)
@@ -29,16 +28,20 @@ int main(int argc, char *argv[])
 	else
 	{
 		change = atoi(argv[1]);
-		for (i = 0; i <= 4; i++)
-		{
-			while (change >= cents[i])
+			while (change >= 1)
 			{
-				change -= cents[i];
-				/*	moneyList[k++] = cents[i];*/
-				k++;
+			if (change >= 25)
+				change -= 25;
+			else if (change >= 10)
+				change -= 10;
+			else if (change >= 5)
+				change -= 5;
+			else if (change >= 2)
+				change -= 2;
+			else
+				change -= 1;
+					k++;
 			}
-		}
-		/*for (i = 0; i < k; i++)*/
 	}
 	printf("%d\n", k);
 	return (0);
