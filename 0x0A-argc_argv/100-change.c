@@ -17,23 +17,17 @@ int cents[] = {25, 10, 5, 2, 1};
 	int i, k = 0;
 
 	notnum = 0;
-	if (argc < 2 &&  (argc >  0) && isdigit(*(argv[1])) == 0)
+if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	for (cnt = 1; cnt < argc; cnt++)
-	{
-		if ((isdigit(*(argv[cnt])) == 0))
-		{
-			notnum = 1;
-		}
-	}
-	if (notnum == 1 || atoi(argv[1]) < 1)
-	{
+
+	i = atoi(argv[1]);
+
+	if (i < 0)
 		printf("0\n");
-		return (0);
-	}
+
 	else
 	{
 		change = atoi(argv[1]);
