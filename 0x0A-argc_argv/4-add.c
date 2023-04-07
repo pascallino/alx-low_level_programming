@@ -10,10 +10,8 @@
  */
 int main(int argc, char *argv[])
 {
-int count, isnum, isonlyalpha, sum;
+int count, sum;
 
-	isnum = 0;
-	isonlyalpha = 0;
 	sum = 0;
 	if ((argc <  2))
 	{
