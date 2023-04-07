@@ -12,7 +12,6 @@ int main(int argc, char *argv[])
 {
 	int change;
 int cents[] = {25, 10, 5, 2, 1};
-	int moneyList[5000];
 	int i, k = 0;
 
 if (argc != 2)
@@ -35,12 +34,12 @@ if (argc != 2)
 			while (change >= cents[i])
 			{
 				change -= cents[i];
-				moneyList[k++] = cents[i];
+			/*	moneyList[k++] = cents[i];*/
+				k++;
 			}
 		}
 		/*for (i = 0; i < k; i++)*/
 	}
-	i = moneyList[0];
 			printf("%d\n", k);
 				return (0);
 }
