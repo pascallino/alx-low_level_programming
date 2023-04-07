@@ -26,8 +26,9 @@ if (argc != 2)
 	i = atoi(argv[1]);
 
 	if (i < 0)
+{
 		printf("0\n");
-
+}
 	else
 	{
 		change = atoi(argv[1]);
