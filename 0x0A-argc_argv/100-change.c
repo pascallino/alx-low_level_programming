@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	int change;
 	int i, k = 0;
 
-	if (argc != 2)
+	if (argc < 2)
 	{
 		printf("Error\n");
 		return (1);
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		change = atoi(argv[1]);
-			while (chang >= 1)
+			while (change >= 1)
 			{
 			if (change >= 25)
 				change -= 25;
@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
 				change -= 2;
 			else
 				change -=1
+
 					k++;
 			}
 printf("%d\n", k);
