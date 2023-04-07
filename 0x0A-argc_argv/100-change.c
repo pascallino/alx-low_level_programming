@@ -30,14 +30,23 @@ int main(int argc, char *argv[])
 		change = atoi(argv[1]);
 			while (change >= 1)
 			{
-			if (change >= 25)
+				if (change % 10 == 7 || change % 10 == 9)
+					change -= 2;
+		else if (change % 25 == 0)
 				change -= 25;
-			else if (change >= 10)
+			else if (change % 10 == 0)
 				change -= 10;
-			else if (change >= 5)
+			else if (change % 5 == 0)
 				change -= 5;
-			else if (change >= 2)
-				change -= 2;
+			else if (change % 2 == 0)
+				if (change % 6 == 0)
+				{
+					change -= 1;
+}
+else
+{
+	change -= 2;
+}
 			else
 				change -= 1;
 					k++;
