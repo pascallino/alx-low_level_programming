@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	isnum = 0;
 	isonlyalpha = 0;
 	sum = 0;
-	if ((argc <  2))
+	if ((argc <  3))
 	{
 		printf("0\n");
 		return (0);
