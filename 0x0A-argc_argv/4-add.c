@@ -24,9 +24,9 @@ else
 	for (count = 1; count < argc; count++)
 	{
 len = strlen(s);
+s = argv[count];
 	for (i = 0; i < len; i++)
 		{
-s = argv[i];
 	if ((isdigit(*(s + i)) == 0))
 		{
 			printf("Error\n");
