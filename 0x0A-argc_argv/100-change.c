@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
 /**
@@ -8,7 +9,8 @@
  * Return: value 0
  */
 int main(int argc, char *argv[])
-{int change;
+{
+	int change;
 	int i, k = 0;
 
 	if (argc != 2)
@@ -16,37 +18,31 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+
 	i = atoi(argv[1]);
+
 	if (i < 0)
+	{
 		printf("0\n");
+	}
 	else
 	{
 		change = atoi(argv[1]);
-		while (change)
-		{
-			if (change % 10 == 7 || change % 10 == 9)
-				change -= 2;
-			else if (change % 25 == 0)
+			while (chang >= 1)
+			{
+			if (change >= 25)
 				change -= 25;
-			else if (change % 10 == 0)
+			else if (change >= 10)
 				change -= 10;
-			else if (change % 5 == 0)
+			else if (change >= 5)
 				change -= 5;
-			else if (change % 2 == 0)
-				if (change % 10 == 6)
-				{
-					change -= 1;
-				}
-				else
-				{
-					change -= 2;
-				}
+			else if (change >= 2)
+				change -= 2;
 			else
-				change -= 1;
-
-		k++;
+				change -=1
+					k++;
+			}
+printf("%d\n", k);
 	}
-		printf("%d\n", k);
-}
-return (0);
+	return (0);
 }
