@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-
 /**
  * main - check the code for ALX School student
  * Description: argc argv[]
@@ -9,14 +8,15 @@
  * @argv: vector
  * Return: Always 0
  */
-
 int main(int argc, char *argv[])
 {
 	int count;
-	int isnotnum;
+	int isnum;
+	int isonlyalpha;
 	int sum;
 
-	isnotnum = 0;
+	isnum = 0;
+	isonlyalpha = 0;
 	sum = 0;
 	if ((argc <  2))
 	{
@@ -27,11 +27,19 @@ int main(int argc, char *argv[])
 	{
 		if ((isdigit(*(argv[count])) == 0))
 		{
-			isnotnum = 1;
+			isonlyalpha = 1;
 		}
-
+		if ((isdigit(*(argv[count])) != 0))
+		{
+			isnum = 1;
+		}
 	}
-	if (isnotnum == 1)
+	if (isonlyalpha == 1 && isnum == 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+	else if (isonlyalpha == 1 && isnum == 1)
 	{
 		printf("Error\n");
 		return (1);
