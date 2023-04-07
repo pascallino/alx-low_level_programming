@@ -25,7 +25,7 @@ else
 	{
 len = strlen(s);
 s = argv[i];
-	for (i = 0; i < strlen(s); i++)
+	for (i = 0; i < len; i++)
 		{
 	if ((isdigit(*(s + i)) == 0))
 		{
