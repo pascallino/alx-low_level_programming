@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		change = atoi(argv[1]);
-		while (change >= 1)
+		while (change)
 		{
 			if (change % 10 == 7 || change % 10 == 9)
 				change -= 2;
