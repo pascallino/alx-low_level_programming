@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 			else if (change >= 2)
 				change -= 2;
 			else
-				change -=1
+				change -= 1;
 
 					k++;
 			}
