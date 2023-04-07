@@ -25,30 +25,16 @@ else
 	{
 		if ((isdigit(*(argv[count])) == 0))
 		{
-			isonlyalpha = 1;
-		}
-		if ((isdigit(*(argv[count])) != 0))
-		{
-			isnum = 1;
-		}
-	}
-	if (isonlyalpha == 1 && isnum == 0)
-	{
-		printf("0\n");
-	}
-	else if (isonlyalpha == 1 && isnum == 1)
-	{
-		printf("Error\n");
+			printf("Error\n");
 		return (1);
+		}
+
 	}
-	else
-	{
 		for (count = 1; count < argc; count++)
 		{
 			sum += atoi(argv[count]);
 		}
 		printf("%d\n", sum);
-	}
 }
 	return (0);
 }
