@@ -11,7 +11,7 @@
  */
 int main(int argc, char *argv[])
 {
-int count, i, sum;
+int count, i, sum, len;
 char *s;
 
 	sum = 0;
@@ -23,6 +23,7 @@ else
 {
 	for (count = 1; count < argc; count++)
 	{
+len = strlen(s);
 s = argv[i];
 	for (i = 0; i < strlen(s); i++)
 		{
