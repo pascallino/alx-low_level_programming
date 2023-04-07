@@ -19,6 +19,8 @@ int count, isnum, isonlyalpha, sum;
 	{
 		printf("0\n");
 	}
+else
+{
 	for (count = 1; count < argc; count++)
 	{
 		if ((isdigit(*(argv[count])) == 0))
@@ -33,7 +35,6 @@ int count, isnum, isonlyalpha, sum;
 	if (isonlyalpha == 1 && isnum == 0)
 	{
 		printf("0\n");
-		return (0);
 	}
 	else if (isonlyalpha == 1 && isnum == 1)
 	{
@@ -48,5 +49,6 @@ int count, isnum, isonlyalpha, sum;
 		}
 		printf("%d\n", sum);
 	}
+}
 	return (0);
 }
