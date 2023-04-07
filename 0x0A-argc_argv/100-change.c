@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
 /**
@@ -23,7 +24,7 @@ int cents[] = {25, 10, 5, 2, 1};
 	}
 	for (cnt = 1; cnt < argc; cnt++)
 	{
-		if ((isdigit(*(argv[count])) == 0))
+		if ((isdigit(*(argv[cnt])) == 0))
 		{
 			notnum = 1;
 		}
@@ -44,7 +45,9 @@ int cents[] = {25, 10, 5, 2, 1};
 				moneyList[k++] = cents[i];
 			}
 		}
-		for (i = 0; i < k; i++)
-			printf("%d\n", moneyList[i])
-				return (0);
+		/*for (i = 0; i < k; i++)*/
 	}
+	notnum = moneyList[0];
+			printf("%d\n", k);
+				return (0);
+}
