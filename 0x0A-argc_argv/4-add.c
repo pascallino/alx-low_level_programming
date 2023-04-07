@@ -23,8 +23,8 @@ else
 {
 	for (count = 1; count < argc; count++)
 	{
-len = strlen(s);
 s = argv[count];
+len = strlen(s);
 	for (i = 0; i < len; i++)
 		{
 	if ((isdigit(*(s + i)) == 0))
