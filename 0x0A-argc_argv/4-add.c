@@ -15,7 +15,7 @@ int count, isnum, isonlyalpha, sum;
 	isnum = 0;
 	isonlyalpha = 0;
 	sum = 0;
-	if ((argc <  3))
+	if ((argc <  2))
 	{
 		printf("0\n");
 		return (0);
