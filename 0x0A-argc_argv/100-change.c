@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	int notnum;
 	int change;
 int cents[] = {25, 10, 5, 2, 1};
-	int moneyList[100];
+	int moneyList[5000];
 	int i, k = 0;
 
 	notnum = 0;
