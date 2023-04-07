@@ -17,7 +17,7 @@ int cents[] = {25, 10, 5, 2, 1};
 	int i, k = 0;
 
 	notnum = 0;
-	if (argc < 2 || (argc >  2))
+	if (argc < 2 &&  (argc >  0) && isdigit(*(argv[1])) == 0)
 	{
 		printf("Error\n");
 		return (1);
