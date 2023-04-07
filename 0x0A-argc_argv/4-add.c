@@ -18,7 +18,6 @@ int count, isnum, isonlyalpha, sum;
 	if ((argc <  2))
 	{
 		printf("0\n");
-		return (0);
 	}
 	for (count = 1; count < argc; count++)
 	{
