@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 /**
- * main - check the code for ALX School student
+ * main - check the code for ALX
  * Description: argc argv[]
  * @argc: count
  * @argv: vector
@@ -10,10 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int count;
-	int isnum;
-	int isonlyalpha;
-	int sum;
+int count, isnum, isonlyalpha, sum;
 
 	isnum = 0;
 	isonlyalpha = 0;
@@ -44,10 +41,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-
 	else
 	{
-
 		for (count = 1; count < argc; count++)
 		{
 			sum += atoi(argv[count]);
