@@ -15,7 +15,6 @@ int cents[] = {25, 10, 5, 2, 1};
 	int moneyList[5000];
 	int i, k = 0;
 
-	notnum = 0;
 if (argc != 2)
 	{
 		printf("Error\n");
