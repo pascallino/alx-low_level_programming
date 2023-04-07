@@ -9,8 +9,7 @@
  * Return: value 0
  */
 int main(int argc, char *argv[])
-{int cnt;
-	int notnum;
+{
 	int change;
 int cents[] = {25, 10, 5, 2, 1};
 	int moneyList[5000];
