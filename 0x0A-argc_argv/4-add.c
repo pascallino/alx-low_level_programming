@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 /**
  * main - check the code for ALX
  * Description: argc argv[]
