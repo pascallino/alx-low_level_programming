@@ -40,7 +40,7 @@ if (argc != 2)
 		}
 		/*for (i = 0; i < k; i++)*/
 	}
-	notnum = moneyList[0];
+	I = moneyList[0];
 			printf("%d\n", k);
 				return (0);
 }
