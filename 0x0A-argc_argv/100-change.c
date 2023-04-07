@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 
 		k++;
 	}
+		printf("%d\n", k);
 }
-printf("%d\n", k);
 return (0);
 }
