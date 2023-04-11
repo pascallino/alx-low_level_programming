@@ -23,13 +23,6 @@ char **strtow(char *str)
     if (str == NULL || *str == '\0')
         return (NULL);
 
-    /*Trim last space in the input string*/
-    while (*ptr == ' ')
-        ptr++;
-
-    if (*ptr == '\0')
-        return (NULL);
-
     while (*ptr != '\0')
     {
         while (*ptr == ' ')
@@ -47,6 +40,15 @@ char **strtow(char *str)
             ptr++;
         }
     }
+
+    // Trim trailing spaces
+    ptr--;
+    while (*ptr == ' ')
+    {
+        nows--;
+        ptr--;
+    }
+
     words = calloc(nows + 1, sizeof(char *));
     if (words == NULL)
         return (NULL);
