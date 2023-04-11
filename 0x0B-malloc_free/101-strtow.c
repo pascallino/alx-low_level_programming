@@ -59,7 +59,8 @@ int len;
 len = strlen(str) - 1;
 while (str[len] == ' ')
 {
-str[len] = "";
+printf("I am here");
+str[len] = '\0';
 len--;
 }
 ptr = str;
