@@ -25,7 +25,7 @@ char **strtow(char *str)
 
     /*Trim last space in the input string*/
 len = strlen(ptr);
-    while (len > 0 && ptr[len - 1] == ' ')
+    while (len > 1 && ptr[len - 1] == ' ')
     {
         ptr[len - 1] = '\0';
         len--;
