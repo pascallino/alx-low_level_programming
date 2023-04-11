@@ -59,7 +59,7 @@ int len;
 len = strlen(str) - 1;
 while (str[len] == ' ')
 {
-str[len] = '\0';
+str[len] = "";
 len--;
 }
 ptr = str;
