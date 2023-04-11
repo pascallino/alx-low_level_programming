@@ -10,7 +10,7 @@
  */
 char **strtow(char *str)
 {
-    char *wordStartAdd;
+    char *wordStartAdd, *end;
     int nows;
     char *ptr;
     char **words;
@@ -23,12 +23,19 @@ char **strtow(char *str)
     if (str == NULL || *str == '\0')
         return (NULL);
 
-    /*Trim last space in the input string*/
+    /* Trim leading spaces in the input string */
     while (*ptr == ' ')
         ptr++;
 
+    /* If the string only contains spaces, return NULL */
     if (*ptr == '\0')
         return (NULL);
+
+    /* Trim trailing spaces in the input string */
+*end = ptr + strlen(ptr) - 1;
+    while (end > ptr && *end == ' ')
+        end--;
+    *(end + 1) = '\0';
 
     while (*ptr != '\0')
     {
@@ -52,7 +59,7 @@ char **strtow(char *str)
         return (NULL);
 
     i = 0;
-    ptr = str;
+    /*ptr = str;*/
     while (*ptr != '\0')
     {
         while (*ptr == ' ')
