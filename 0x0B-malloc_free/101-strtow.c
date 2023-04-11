@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+char *trim(char *str);
 /**
  * strtow - converts a substring to a pointer array
  * @str: pointer to string
@@ -51,7 +51,7 @@ char **strtow(char *str)
         return (NULL);
 
     i = 0;
-    ptr = str;
+    ptr = trim(str);
     while (*ptr != '\0')
     {
         while (*ptr == ' ')
@@ -81,4 +81,14 @@ char **strtow(char *str)
     }
     words[i] = NULL;
     return (words);
+}
+char *trim(char *str)
+{
+    while (*str == ' ')
+        str++;
+    char *end = str + strlen(str) - 1;
+    while (end > str && *end == ' ')
+        end--;
+    *(end + 1) = '\0';
+    return str;
 }
