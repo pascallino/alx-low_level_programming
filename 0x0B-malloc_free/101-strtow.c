@@ -11,7 +11,7 @@
 char **strtow(char *str)
 {
     char *wordStartAdd;
-    int nows;
+    int nows, len;
     char *ptr;
     char **words;
     int j, word_len, i;
@@ -23,8 +23,8 @@ char **strtow(char *str)
     if (str == NULL || *str == '\0')
         return (NULL);
 
-    // Trim last space in the input string
-    int len = strlen(ptr);
+    /*Trim last space in the input string*/
+len = strlen(ptr);
     while (len > 0 && ptr[len - 1] == ' ')
     {
         ptr[len - 1] = '\0';
