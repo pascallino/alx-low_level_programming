@@ -1,110 +1,68 @@
-#include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
-#include <string.h>
-void trimTrailing(char * s);
 /**
- * strtow - converts a substring to a pointer array
- * @str: pointer to string
- * Description: string array builder
- * Return: **word
+ * ch_free_grid - farray.
+ * @grid: har.
+ * @height: height of the array.
+ *
+ * Return: no return
+ */
+
+void free_grid(char **grid, unsigned int height)
+{
+	if (grid != NULL && height != 0)
+	{
+		for (; height > 0; height--)
+			free(grid[height]);
+		free(grid[height]);
+		free(grid);
+	}
+}
+/**
+ * strtow - splits a string into words.
+ * @str: string.
+ *
+ * Return: pointer of an array of integers
  */
 char **strtow(char *str)
 {
-    char *wordStartAdd;
-    int nows;
-    char *ptr;
-    char **words;
-    int j, word_len, i;
+	char **a;
+	unsigned int c, height, i, j, a1;
 
-    nows = 0;
-    i = 0;
-    j = 0;
-    if (str == NULL || *str == '\0')
-        return (NULL);
+	if (str == NULL || *str == '\0')
+		return (NULL);
+	for (c = height = 0; str[c] != '\0'; c++)
+		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
+			height++;
 
-    /*Trim last space in the input string*/
-    trimTrailing(str);
-ptr = str;
-while (*ptr == ' ')
-        ptr++;
+	a = malloc((height + 1) * sizeof(char *));
 
-    if (*ptr == '\0')
-        return (NULL);
-
-    while (*ptr != '\0')
-    {
-        while (*ptr == ' ')
-        {
-            ptr++;
-        }
-
-        if (*ptr != '\0')
-        {
-            nows++;
-        }
-
-        while (*ptr != ' ' && *ptr != '\0')
-        {
-            ptr++;
-        }
-    }
-    words = calloc(nows + 1, sizeof(char *));
-    if (words == NULL)
-        return (NULL);
-
-    i = 0;
-    ptr = str;
-    while (*ptr != '\0')
-    {
-        while (*ptr == ' ')
-        {
-            ptr++;
-        }
-
-        wordStartAdd = ptr;
-        while (*ptr != ' ' && *ptr != '\0')
-        {
-            ptr++;
-        }
-        word_len = ptr - wordStartAdd;
-
-        words[i] = calloc(word_len + 1, sizeof(char));
-        if (words[i] == NULL)
-        {
-            for (j = 0; j < i; j++)
-            {
-                free(words[j]);
-            }
-            free(words);
-            return (NULL);
-        }
-
-        strncpy(words[i], wordStartAdd, word_len);
-        words[i][word_len] = '\0';
-        i++;
-    }
-    words[i] = NULL;
-    return (words);
-}
-void trimTrailing(char * s)
-{
-    int index, i;
-
-    /* Set default index */
-    index = -1;
-
-    /* Find last index of non-white space character */
-    i = 0;
-    while(s[i] != '\0')
-    {
-        if(s[i] != ' ' && s[i] != '\t' && s[i] != '\n')
-        {
-            index= i;
-        }
-
-        i++;
-    }
-
-    /* Mark next character to last non-white space character as NULL */
-    s[index + 1] = '\0';
+	if (a == NULL || height == 0)
+	{
+		free(a);
+		return (NULL);
+	}
+	for (i = a1 = 0; i < height; i++)
+	{
+		for (c = a1; str[c] != '\0'; c++)
+		{
+			if (str[c] == ' ')
+				a1++;
+			if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
+			{
+				aout[i] = malloc((c - a1 + 2) * sizeof(char));
+				if (a[i] == NULL)
+				{
+					free_grid(aout, i);
+					return (NULL);
+				}
+				break;
+			}
+		}
+		for (j = 0; a1 <= c; a1++, j++)
+			a[i][j] = str[a1];
+		a[i][j] = '\0';
+	}
+	a[i] = NULL;
+	return (a);
 }
