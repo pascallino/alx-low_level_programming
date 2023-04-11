@@ -1,7 +1,13 @@
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
-
+char **alloc(int size);
+/**
+ * strtow - cooverts a substring to a pointer array
+ * @str: pointer to string
+ * Description: string array builder
+ * Return: **word
+ */
 char **strtow(char *str)
 {
 	char *wordStartAdd;
@@ -26,7 +32,7 @@ char **strtow(char *str)
 			ptr++;
 
 	}
-	words = (char **) malloc(nows * sizeof(char *));
+	words = alloc(nows * sizeof(char));
 	if (words == NULL)
 		return (NULL);
 
@@ -46,7 +52,7 @@ char **strtow(char *str)
 		if (words[i] == NULL)
 		{
 			for (j = 0; j < i; j++)
-		free(words[j]);
+				free(words[j]);
 
 			free(words);
 			return (NULL);
@@ -56,4 +62,14 @@ char **strtow(char *str)
 		i++;
 	}
 	return (words);
+}
+/**
+ * alloc - memmory allocation
+ * @size: size of the data
+ * Description: allocate size
+ * Return: char **
+ */
+char **alloc(int size)
+{
+	return ((char **) malloc(size));
 }
