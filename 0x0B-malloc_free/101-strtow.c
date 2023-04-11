@@ -1,14 +1,14 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * ch_free_grid - farray.
+ * free_space - farray.
  * @grid: har.
  * @height: height of the array.
  *
  * Return: no return
  */
 
-void free_grid(char **grid, unsigned int height)
+void free_space(char **grid, unsigned int height)
 {
 	if (grid != NULL && height != 0)
 	{
@@ -50,10 +50,10 @@ char **strtow(char *str)
 				a1++;
 			if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
 			{
-				aout[i] = malloc((c - a1 + 2) * sizeof(char));
+				a[i] = malloc((c - a1 + 2) * sizeof(char));
 				if (a[i] == NULL)
 				{
-					free_grid(a, i);
+					free_space(a, i);
 					return (NULL);
 				}
 				break;
