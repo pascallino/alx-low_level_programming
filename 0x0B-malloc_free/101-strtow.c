@@ -85,8 +85,6 @@ char **strtow(char *str)
 char *trim(char *str)
 {
 char *end;
-    while (*str == ' ')
-        str++;
 end = str + strlen(str) - 1;
     while (end > str && *end == ' ')
         end--;
