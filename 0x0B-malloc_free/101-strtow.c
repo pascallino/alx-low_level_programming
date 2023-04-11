@@ -11,7 +11,7 @@
 char **strtow(char *str)
 {
     char *wordStartAdd;
-    int nows, len;
+    int nows;
     char *ptr;
     char **words;
     int j, word_len, i;
