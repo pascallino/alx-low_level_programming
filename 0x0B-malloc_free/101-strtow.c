@@ -66,6 +66,10 @@ char **strtow(char *str)
             ptr++;
         }
         word_len = ptr - wordStartAdd;
+if (i == nows && *ptr == ' ')
+{
+word_len--;
+} 
         words[i] = calloc(word_len + 1, sizeof(char));
         if (words[i] == NULL)
         {
@@ -76,10 +80,7 @@ char **strtow(char *str)
             free(words);
             return (NULL);
         }
-if (i == nows && *ptr == ' ')
-{
-word_len--;
-} 
+
         strncpy(words[i], wordStartAdd, word_len);
         words[i][word_len] = '\0';
         i++;
