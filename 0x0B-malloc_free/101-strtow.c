@@ -1,68 +1,109 @@
-#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
-/**
- * free_space - farray.
- * @grid: har.
- * @height: height of the array.
- *
- * Return: no return
- */
+#include <string.h>
 
-void free_space(char **grid, unsigned int height)
-{
-	if (grid != NULL && height != 0)
-	{
-		for (; height > 0; height--)
-			free(grid[height]);
-		free(grid[height]);
-		free(grid);
-	}
-}
+void *callo(int n, long size);
 /**
- * strtow - splits a string into words.
- * @str: string.
+ * strtow - converts a substring to a pointer array
+ * @str: pointer to string
+ * Description: string array builder
  *
- * Return: pointer of an array of integers
+ * Return: **word
  */
 char **strtow(char *str)
 {
-	char **a;
-	unsigned int c, height, i, j, a1;
+	char *wordStartAdd;
+	int nows;
+	char *ptr;
+	char **words;
+	int j, word_len, i;
+
+	nows = 0;
+	i = 0;
+	j = 0;
+	ptr = str;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
-	for (c = height = 0; str[c] != '\0'; c++)
-		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
-			height++;
 
-	a = malloc((height + 1) * sizeof(char *));
+	/* Trim last space in the input string */
+	while (*ptr == ' ')
+		ptr++;
 
-	if (a == NULL || height == 0)
-	{
-		free(a);
+	if (*ptr == '\0')
 		return (NULL);
-	}
-	for (i = a1 = 0; i < height; i++)
+
+	while (*ptr != '\0')
 	{
-		for (c = a1; str[c] != '\0'; c++)
+		while (*ptr == ' ')
 		{
-			if (str[c] == ' ')
-				a1++;
-			if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
-			{
-				a[i] = malloc((c - a1 + 2) * sizeof(char));
-				if (a[i] == NULL)
-				{
-					free_space(a, i);
-					return (NULL);
-				}
-				break;
-			}
+			ptr++;
 		}
-		for (j = 0; a1 <= c; a1++, j++)
-			a[i][j] = str[a1];
-		a[i][j] = '\0';
+
+		if (*ptr != '\0')
+		{
+			nows++;
+		}
+
+		while (*ptr != ' ' && *ptr != '\0')
+		{
+			ptr++;
+		}
 	}
-	a[i] = NULL;
-	return (a);
+
+	words = callo(nows + 1, sizeof(char *));
+	if (words == NULL)
+		return (NULL);
+
+	i = 0;
+	ptr = str;
+	while (*ptr != '\0')
+	{
+		while (*ptr == ' ')
+		{
+			ptr++;
+		}
+
+		wordStartAdd = ptr;
+		while (*ptr != ' ' && *ptr != '\0')
+		{
+			ptr++;
+		}
+
+		word_len = ptr - wordStartAdd;
+		if (word_len == 0)
+		{
+			break;
+		}
+
+		words[i] = calloc(word_len + 1, sizeof(char));
+		if (words[i] == NULL)
+		{
+			for (j = 0; j < i; j++)
+			{
+				free(words[j]);
+			}
+
+			free(words);
+			return (NULL);
+		}
+
+		strncpy(words[i], wordStartAdd, word_len);
+		words[i][word_len] = '\0';
+		i++;
+	}
+
+	words[i] = NULL;
+	return (words);
+}
+/**
+ * callo - calloc
+ * Description: return void pointer
+ * @n: number
+ * @size: size
+ * Return: pointer
+ */
+void *callo(int n, long size)
+{
+return (calloc(n, size));
 }
