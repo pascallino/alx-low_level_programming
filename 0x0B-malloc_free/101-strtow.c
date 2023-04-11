@@ -76,6 +76,10 @@ char **strtow(char *str)
             free(words);
             return (NULL);
         }
+if (i == now && *ptr == ` `)
+{
+word_len--;
+} 
         strncpy(words[i], wordStartAdd, word_len);
         words[i][word_len] = '\0';
         i++;
