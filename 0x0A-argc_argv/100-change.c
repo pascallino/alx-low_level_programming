@@ -26,6 +26,8 @@ int main(int argc, char *argv[])
 		{
 			if (change % 10 == 7 || change % 10 == 9)
 				change -= 2;
+			else if (change % 10 == 3)
+				change -= 1;
 			else if (change % 25 == 0)
 				change -= 25;
 			else if (change % 10 == 0)
