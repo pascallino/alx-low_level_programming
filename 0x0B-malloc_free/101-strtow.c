@@ -10,7 +10,7 @@
  */
 char **strtow(char *str)
 {
-    char *wordStartAdd;
+    char *wordStartAdd, ™end;
     int nows;
     char *ptr;
     char **words;
@@ -29,6 +29,12 @@ char **strtow(char *str)
 
     if (*ptr == '\0')
         return (NULL);
+
+end = str + strlen(str) - 1;
+while (end > str && *end == ' ')
+    end--;
+
+*(end + 1) = '\0';
 
     while (*ptr != '\0')
     {
