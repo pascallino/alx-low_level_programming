@@ -31,12 +31,6 @@ char **strtow(char *str)
     if (*ptr == '\0')
         return (NULL);
 
-    /* Trim trailing spaces in the input string */
-*end = ptr + strlen(ptr) - 1;
-    while (end > ptr && *end == ' ')
-        end--;
-    *(end + 1) = '\0';
-
     while (*ptr != '\0')
     {
         while (*ptr == ' ')
