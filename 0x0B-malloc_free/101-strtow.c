@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+void trimTrailing(char * s);
 /**
  * strtow - converts a substring to a pointer array
  * @str: pointer to string
@@ -19,12 +19,13 @@ char **strtow(char *str)
     nows = 0;
     i = 0;
     j = 0;
-    ptr = str;
     if (str == NULL || *str == '\0')
         return (NULL);
 
     /*Trim last space in the input string*/
-    while (*ptr == ' ')
+    trimTrailing(str);
+ptr = str;
+while (*ptr == ' ')
         ptr++;
 
     if (*ptr == '\0')
@@ -84,4 +85,26 @@ char **strtow(char *str)
     }
     words[i] = NULL;
     return (words);
+}
+void trimTrailing(char * s)
+{
+    int index, i;
+
+    /* Set default index */
+    index = -1;
+
+    /* Find last index of non-white space character */
+    i = 0;
+    while(s[i] != '\0')
+    {
+        if(s[i] != ' ' && s[i] != '\t' && s[i] != '\n')
+        {
+            index= i;
+        }
+
+        i++;
+    }
+
+    /* Mark next character to last non-white space character as NULL */
+    s[index + 1] = '\0';
 }
