@@ -17,7 +17,7 @@ char *argstostr(int ac, char **av)
 	if (ac < 2 || av == NULL)
 		return (NULL);
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		/* exclude the first argument, which is the program name*/
 		length += (strlen(av[i]) + 1);
@@ -29,7 +29,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	strcpy(result, "");
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		strcat(result, av[i]);
 		strcat(result, "\n");
