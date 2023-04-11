@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 /**
  * strtow - converts a substring to a pointer array
  * @str: pointer to string
