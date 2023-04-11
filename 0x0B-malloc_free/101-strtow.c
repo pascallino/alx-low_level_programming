@@ -11,7 +11,7 @@ char **alloc(int size);
  */
 char **strtow(char *str)
 {
-	char *wordStartAdd, *endadd;
+	char *wordStartAdd;
 	int nows;
 	char *ptr;
 	char **words;
@@ -48,7 +48,6 @@ char **strtow(char *str)
 		while (*ptr == ' ')
 		{
 			ptr++;
-			size--;
 		}
 
 		wordStartAdd = ptr;
