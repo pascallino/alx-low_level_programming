@@ -15,11 +15,10 @@ char **strtow(char *str)
 	int nows;
 	char *ptr;
 	char **words;
-	int j, size,  word_len, i;
+	int j, word_len, i;
 
 	nows = 0;
 	i = 0;
-	size = strlen(str);
 	j = 0;
 	ptr = str;
 	while (*ptr != '\0')
