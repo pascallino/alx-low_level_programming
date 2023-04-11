@@ -21,6 +21,9 @@ char **strtow(char *str)
 	i = 0;
 	j = 0;
 	ptr = str;
+	if (str == NULL || str == "")
+		return (NULL);
+
 	while (*ptr != '\0')
 	{
 		while (*ptr == ' ')
