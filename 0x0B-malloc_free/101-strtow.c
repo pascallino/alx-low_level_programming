@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 char **alloc(int size);
@@ -10,29 +11,34 @@ char **alloc(int size);
  */
 char **strtow(char *str)
 {
-	char *wordStartAdd;
+	char *wordStartAdd, *endadd;
 	int nows;
 	char *ptr;
 	char **words;
-	int j, word_len, i;
+	int j, size,  word_len, i;
 
 	nows = 0;
 	i = 0;
+	size = strlen(str);
 	j = 0;
 	ptr = str;
 	while (*ptr != '\0')
 	{
 		while (*ptr == ' ')
+		{
 			ptr++;
+		}
 
 		if (*ptr != '\0')
+		{
 			nows++;
+		}
 
 		while (*ptr != ' ' && *ptr != '\0')
 			ptr++;
 
 	}
-	words = alloc(nows * sizeof(char));
+	words = alloc(nows * sizeof(char *));
 	if (words == NULL)
 		return (NULL);
 
@@ -41,25 +47,34 @@ char **strtow(char *str)
 	while (*ptr != '\0')
 	{
 		while (*ptr == ' ')
+		{
 			ptr++;
+			size--;
+		}
 
 		wordStartAdd = ptr;
 		while (*ptr != ' ' && *ptr != '\0')
+		{
 			ptr++;
-
+		}
+		if (*ptr == '\0')
+		{
+		}
 		word_len = ptr - wordStartAdd;
 		words[i] = (char *) malloc((word_len + 1) * sizeof(char));
 		if (words[i] == NULL)
 		{
+			printf("jj");
 			for (j = 0; j < i; j++)
+			{
 				free(words[j]);
-
+			}
 			free(words);
 			return (NULL);
 		}
 		strncpy(words[i], wordStartAdd, word_len);
-		words[i][word_len] = '\0';
-		i++;
+words[i][word_len] = '\0';
+	i++;
 	}
 	return (words);
 }
