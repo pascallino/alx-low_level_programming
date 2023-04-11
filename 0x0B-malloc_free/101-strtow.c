@@ -66,10 +66,7 @@ char **strtow(char *str)
             ptr++;
         }
         word_len = ptr - wordStartAdd;
-if (i == nows && *ptr == ' ')
-{
-word_len--;
-} 
+
         words[i] = calloc(word_len + 1, sizeof(char));
         if (words[i] == NULL)
         {
