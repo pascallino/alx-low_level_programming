@@ -58,8 +58,9 @@ char **strtow(char *str)
 		{
 			ptr++;
 		}
-		if (*ptr == '\0')
+		if (i == 7)
 		{
+			printf("error");
 		}
 		word_len = ptr - wordStartAdd;
 		words[i] = (char *) malloc((word_len + 1) * sizeof(char));
