@@ -41,13 +41,13 @@ char **strtow(char *str)
         }
     }
 
-    // Trim trailing spaces
     ptr--;
     while (*ptr == ' ')
     {
         nows--;
         ptr--;
     }
+
 
     words = calloc(nows + 1, sizeof(char *));
     if (words == NULL)
