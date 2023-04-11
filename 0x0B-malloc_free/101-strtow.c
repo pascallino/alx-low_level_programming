@@ -40,7 +40,7 @@ char **strtow(char *str)
             ptr++;
         }
     }
-    words = calloc(nows, sizeof(char *));
+    words = (char **)calloc(nows + 1, sizeof(char *));
     if (words == NULL)
         return (NULL);
 
