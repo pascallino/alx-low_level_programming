@@ -24,12 +24,12 @@ char **strtow(char *str)
         return (NULL);
 
     /*Trim last space in the input string*/
-len = strlen(ptr);
+/*len = strlen(ptr);
     while (len > 1 && ptr[len - 1] == ' ')
     {
         ptr[len - 1] = '\0';
         len--;
-    }
+    }*/
 
     while (*ptr == ' ')
         ptr++;
