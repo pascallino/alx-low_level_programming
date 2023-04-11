@@ -23,11 +23,10 @@ char **strtow(char *str)
     if (str == NULL || *str == '\0')
         return (NULL);
 
-    /* Trim leading spaces in the input string */
+    /*Trim last space in the input string*/
     while (*ptr == ' ')
         ptr++;
 
-    /* If the string only contains spaces, return NULL */
     if (*ptr == '\0')
         return (NULL);
 
@@ -53,7 +52,7 @@ char **strtow(char *str)
         return (NULL);
 
     i = 0;
-    /*ptr = str;*/
+    ptr = str;
     while (*ptr != '\0')
     {
         while (*ptr == ' ')
