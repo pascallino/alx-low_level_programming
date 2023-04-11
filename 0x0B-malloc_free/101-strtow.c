@@ -10,7 +10,7 @@
  */
 char **strtow(char *str)
 {
-    char *wordStartAdd, *end;
+    char *wordStartAdd;
     int nows;
     char *ptr;
     char **words;
