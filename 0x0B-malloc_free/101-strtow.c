@@ -30,12 +30,11 @@ char **strtow(char *str)
     if (*ptr == '\0')
         return (NULL);
 
-end = str + strlen(str) - 1;
-while (end > str && *end == ' ')
-    end--;
-
-*(end + 1) = '\0';
-
+end = ptr;
+if(*(end + (strlen(ptr) - 1) == ' ')
+{
+*(end + (strlen(ptr) - 1) = '\0';
+} 
     while (*ptr != '\0')
     {
         while (*ptr == ' ')
