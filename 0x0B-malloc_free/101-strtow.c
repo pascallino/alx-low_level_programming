@@ -13,7 +13,6 @@ char **strtow(char *str)
     char *wordStartAdd;
     int nows;
     char *ptr;
-int len;
     char **words;
     int j, word_len, i;
 
@@ -22,6 +21,13 @@ int len;
     j = 0;
     ptr = str;
     if (str == NULL || *str == '\0')
+        return (NULL);
+
+    /*Trim last space in the input string*/
+    while (*ptr == ' ')
+        ptr++;
+
+    if (*ptr == '\0')
         return (NULL);
 
     while (*ptr != '\0')
@@ -46,15 +52,7 @@ int len;
         return (NULL);
 
     i = 0;
-
-len = strlen(str) - 1;
-while (str[len] == ' ')
-{
-printf("I am here");
-str[len] = '\0';
-len--;
-}
-ptr = str;
+    ptr = str;
     while (*ptr != '\0')
     {
         while (*ptr == ' ')
