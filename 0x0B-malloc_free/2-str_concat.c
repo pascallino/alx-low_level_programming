@@ -18,7 +18,16 @@ char *str_concat(char *dest, char *src)
 
 	i = 0;
 	j = 0;
+	if (dest == NULL)
+		dest = "";
+	if (src == NULL)
+		src = "";
+
 	s =  malloc((strlen(dest) + strlen(src)) + 1 * sizeof(char));
+	if (s == NULL)
+	{
+		return (NULL);
+	}
 	while (dest[i] != '\0')
 	{
 		s[i] = dest[i];
