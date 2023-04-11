@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 /**
  * strtow - converts a substring to a pointer array
  * @str: pointer to string
@@ -23,6 +19,12 @@ char **strtow(char *str)
     if (str == NULL || *str == '\0')
         return (NULL);
 
+    while (*ptr == ' ')
+        ptr++;
+
+    if (*ptr == '\0')
+        return (NULL);
+
     while (*ptr != '\0')
     {
         while (*ptr == ' ')
@@ -40,7 +42,7 @@ char **strtow(char *str)
             ptr++;
         }
     }
-    words = (char **)calloc(nows + 1, sizeof(char *));
+    words = calloc(nows + 1, sizeof(char *));
     if (words == NULL)
         return (NULL);
 
