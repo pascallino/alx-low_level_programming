@@ -13,6 +13,7 @@ char **strtow(char *str)
     char *wordStartAdd;
     int nows;
     char *ptr;
+int len;
     char **words;
     int j, word_len, i;
 
@@ -54,7 +55,13 @@ char **strtow(char *str)
         return (NULL);
 
     i = 0;
-    ptr = str;
+
+len = strlen(str) - 1;
+if (str[len] == ' ')
+{
+str[len] = '\0';
+}
+ptr = str;
     while (*ptr != '\0')
     {
         while (*ptr == ' ')
