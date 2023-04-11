@@ -76,7 +76,7 @@ char **strtow(char *str)
             free(words);
             return (NULL);
         }
-if (i == nows && *ptr == ` `)
+if (i == nows && *ptr == ' ')
 {
 word_len--;
 } 
