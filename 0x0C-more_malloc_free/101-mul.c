@@ -57,9 +57,11 @@ void multiply(char *num1, char *num2)
 	int len1, j;
 	int len2, i;
 	int *result;
+int a;
 	int pos1, pos2, product, sum;
 
 	len1 = 0;
+a = 0;
 	len2 = 0;
 	while (num1[len1] != '\0')
 	{
@@ -89,8 +91,21 @@ void multiply(char *num1, char *num2)
 	}
 	for (j = i; j < len1 + len2; j++)
 	{
-		_putchar(result[j] + '0');
+		if (result[i])
+			a = 1;
+		if (a)
+			_putchar(result[i] + '0');
 	}
-	free(result);
+	if (!a)
+		_putchar('0');
 	_putchar('\n');
+	free(result);if (result[i])
+			a = 1;
+		if (a)
+			_putchar(result[i] + '0');
+	}
+	if (!a)
+		_putchar('0');
+	_putchar('\n');
+	free(result);
 }
