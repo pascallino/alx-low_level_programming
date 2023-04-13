@@ -15,10 +15,6 @@ if (nmemb == 0 || size == 0)
 {
 	return (NULL);
 }
-if (nmemb == NULL)
-{
-return (NULL);
-}
 p = malloc(nmemb * size);
 if (p == NULL)
 {
