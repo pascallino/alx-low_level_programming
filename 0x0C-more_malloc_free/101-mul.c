@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -73,7 +74,7 @@ void multiply(char *num1, char *num2)
 	}
 	for (j = i; j < len1 + len2; j++) 
 	{
-		putchar(result[j] + '0');
+		_putchar(result[j] + '0');
 	}
 	free(result);
 	putchar('\n');
