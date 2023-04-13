@@ -5,30 +5,37 @@
 
 void multiply(char *num1, char *num2);
 
-int main(int argc, char **argv) 
+/**
+ * main - Entry point
+ * @argc: count
+ * @argv: vector array
+ * Description: entry
+ * Return: 0
+ */
+int main(int argc, char **argv)
 {
 	char *num1;
 	char *num2;
-int i;
+	int i;
 
-	if (argc != 3) 
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (98);
 	}
 	num1 = argv[1];
 	num2 = argv[2];
-	for (i = 0; num1[i] != '\0'; i++) 
+	for (i = 0; num1[i] != '\0'; i++)
 	{
-		if (!isdigit(num1[i])) 
+		if (!isdigit(num1[i]))
 		{
 			printf("Error\n");
 			return (98);
 		}
 	}
-	for (i = 0; num2[i] != '\0'; i++) 
+	for (i = 0; num2[i] != '\0'; i++)
 	{
-		if (!isdigit(num2[i])) 
+		if (!isdigit(num2[i]))
 		{
 			printf("Error\n");
 			return (98);
@@ -38,26 +45,34 @@ int i;
 	return (0);
 }
 
-void multiply(char *num1, char *num2) 
+/**
+ * multiply - muls two numbers
+ * Description: print mul result
+ * @num1: 1
+ * @num2: 2
+ * Return: void
+ */
+void multiply(char *num1, char *num2)
 {
 	int len1, j;
 	int len2, i;
 	int *result;
 	int pos1, pos2, product, sum;
+
 	len1 = 0;
 	len2 = 0;
-	while (num1[len1] != '\0') 
+	while (num1[len1] != '\0')
 	{
 		len1++;
 	}
-	while (num2[len2] != '\0') 
+	while (num2[len2] != '\0')
 	{
 		len2++;
 	}
 	result = calloc(len1 + len2, sizeof(int));
-	for (i = len1 - 1; i >= 0; i--) 
+	for (i = len1 - 1; i >= 0; i--)
 	{
-		for (j = len2 - 1; j >= 0; j--) 
+		for (j = len2 - 1; j >= 0; j--)
 		{
 			product = (num1[i] - '0') * (num2[j] - '0');
 			pos1 = i + j;
@@ -68,11 +83,11 @@ void multiply(char *num1, char *num2)
 		}
 	}
 	i = 0;
-	while (result[i] == 0) 
+	while (result[i] == 0)
 	{
 		i++;
 	}
-	for (j = i; j < len1 + len2; j++) 
+	for (j = i; j < len1 + len2; j++)
 	{
 		_putchar(result[j] + '0');
 	}
