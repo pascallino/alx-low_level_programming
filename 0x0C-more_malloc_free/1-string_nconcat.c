@@ -14,11 +14,11 @@
 
 char *string_nconcat(char *dest, char *src, unsigned int lenght)
 {
-	int i, j, n;
+	int i, j, index, n;
 	char *s;
 
 	i = 0;
-	n = lenght;
+	len = lenght;
 	j = 0;
 if (dest == NULL)
 	{
@@ -28,7 +28,10 @@ if (dest == NULL)
 	{
 		src = "";
 	}
-	s =  malloc(((strlen(dest) + n + 1)) * sizeof(char));
+for (index = 0; dest[index]; index++)
+		len++;
+
+	s =  malloc(((len + 1)) * sizeof(char));
 	if (s == NULL)
 	{
 		return (NULL);
@@ -38,7 +41,6 @@ if (dest == NULL)
 		s[i] = dest[i];
 		i++;
 	}
-
 while (src[j] != '\0' && j < n)
 {
 	s[i] = src[j];
