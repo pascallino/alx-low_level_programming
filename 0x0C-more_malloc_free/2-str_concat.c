@@ -30,6 +30,6 @@ char *str_concat(char *dest, char *src)
 		i++;
 	}
 
-while (src[j] != '\0')               {                                    s[i] = src[j];
+while (src[j] != '\0' && j < n)               {                                    s[i] = src[j];
 i++;                                 j++;                                 }                                    i++;                                 s[i] = '\0';                         return (s);
 }
