@@ -38,18 +38,13 @@ for (dex = 0; dest[dex]; dex++)
 	{
 		return (NULL);
 	}
-	while (dest[i] != '\0')
-	{
-		s[i] = dest[i];
-		i++;
-	}
-while (src[j] != '\0' && j < (int)lenght)
-{
-	s[i] = src[j];
-i++;
-j++;
-}
-i++;
-s[i] = '\0';
+len = 0;
+for (dex = 0; dest[dex]; dex++)
+		s[len++] = dest[dex];
+
+	for (dex = 0; src[dex] && dex < n; dex++)
+		s[len++] = src[index];
+
+	s[len] = '\0';
 return (s);
 }
