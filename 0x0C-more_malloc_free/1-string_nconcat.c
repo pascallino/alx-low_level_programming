@@ -14,7 +14,7 @@
 
 char *string_nconcat(char *dest, char *src, unsigned int n)
 {
-int dex;
+unsigned int dex;
 	char *s;
 unsigned int len = n;
 
