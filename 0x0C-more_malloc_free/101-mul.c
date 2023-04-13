@@ -74,6 +74,11 @@ int main(int argc, char **argv)
 			_puts("Error\n");
 			return (98);
 		}
+if (num1[0] == 48 || num2[0] == 48)
+{
+printf("0\n");
+return (0);
+}
 	}
 	for (i = 0; num2[i] != '\0'; i++)
 	{
