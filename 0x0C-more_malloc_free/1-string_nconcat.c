@@ -14,7 +14,7 @@
 
 char *string_nconcat(char *dest, char *src, unsigned int lenght)
 {
-	int i, j, len, n;
+	int i, j, n;
 	char *s;
 
 	i = 0;
@@ -28,8 +28,7 @@ if (dest == NULL)
 	{
 		src = "";
 	}
-	len = strlen(src);
-	s =  malloc(((strlen(dest) + len + 1)) * sizeof(char));
+	s =  malloc(((strlen(dest) + n + 1)) * sizeof(char));
 	if (s == NULL)
 	{
 		return (NULL);
