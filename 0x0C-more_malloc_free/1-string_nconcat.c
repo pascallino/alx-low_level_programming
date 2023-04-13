@@ -42,7 +42,6 @@ if (dest == NULL)
 	{
 		s[i] = dest[i];
 		i++;
-		printf("%c", s[i]);
 	}
 
 while (src[j] != '\0' && j < n)
