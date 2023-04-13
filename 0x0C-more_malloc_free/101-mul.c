@@ -77,5 +77,5 @@ void multiply(char *num1, char *num2)
 		_putchar(result[j] + '0');
 	}
 	free(result);
-	putchar('\n');
+	_putchar('\n');
 }
