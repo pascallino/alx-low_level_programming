@@ -70,8 +70,8 @@ void multiply(char *num1, char *num2)
         len2++;
     }
 
-    // Check if either input string is "0"
-    if (len1 == 1 && num1[0] == '0' || len2 == 1 && num2[0] == '0') {
+    if (len1 == 1 && num1[0] == '0' || len2 == 1 && num2[0] == '0') 
+{
         printf("0\n");
         return;
     }
