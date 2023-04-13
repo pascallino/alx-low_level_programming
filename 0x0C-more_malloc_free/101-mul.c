@@ -63,10 +63,10 @@ int main(int argc, char **argv)
 	num2 = argv[2];
 
 	if (argc != 3 || !is_digit(num1) || !is_digit(num2))
-{
-		_puts("Error\n");
-			return (98);;
-}
+	{
+	_puts("Error\n");
+		return (98);
+	}
 	for (i = 0; num1[i] != '\0'; i++)
 	{
 		if (!isdigit(num1[i]) && num1[i] != '-')
