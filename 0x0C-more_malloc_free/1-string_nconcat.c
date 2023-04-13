@@ -41,7 +41,7 @@ for (index = 0; dest[index]; index++)
 		s[i] = dest[i];
 		i++;
 	}
-while (src[j] != '\0' && j < n)
+while (src[j] != '\0' && j < lenght)
 {
 	s[i] = src[j];
 i++;
