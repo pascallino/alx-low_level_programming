@@ -18,6 +18,7 @@ char *string_nconcat(char *dest, char *src, unsigned int lenght)
 	char *s;
 
 	i = 0;
+dex = 0;
 	len = lenght;
 	j = 0;
 if (dest == NULL)
