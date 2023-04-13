@@ -33,7 +33,7 @@ if (dest == NULL)
 	{
 		n = len;
 	}
-	s =  malloc((strlen(dest) + n) + 1 * sizeof(char));
+	s =  malloc(((strlen(dest) + n + 1)) * sizeof(char));
 	if (s == NULL)
 	{
 		return (NULL);
