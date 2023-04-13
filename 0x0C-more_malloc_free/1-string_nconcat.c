@@ -14,7 +14,7 @@
 
 char *string_nconcat(char *dest, char *src, unsigned int lenght)
 {
-	int i, j, index;
+	int i, len, j, index;
 	char *s;
 
 	i = 0;
