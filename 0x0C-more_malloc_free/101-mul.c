@@ -43,7 +43,6 @@ void multiply(char *num1, char *num2)
 	int len2, i;
 	int *result;
 	int pos1, pos2, product, sum;
-	int final_result;
 	len1 = 0;
 	len2 = 0;
 	while (num1[len1] != '\0') 
@@ -72,7 +71,6 @@ void multiply(char *num1, char *num2)
 	{
 		i++;
 	}
-	final_result = 0;
 	for (j = i; j < len1 + len2; j++) 
 	{
 		putchar(result[j] + '0');
