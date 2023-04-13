@@ -41,7 +41,7 @@ for (dex = 0; dest[dex]; dex++)
 		s[len++] = dest[dex];
 
 	for (dex = 0; src[dex] && dex < n; dex++)
-		s[len++] = src[index];
+		s[len++] = src[dex];
 
 	s[len] = '\0';
 return (s);
