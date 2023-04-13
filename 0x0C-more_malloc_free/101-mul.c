@@ -4,6 +4,23 @@
 #include <ctype.h>
 
 void multiply(char *num1, char *num2);
+void _puts(char *str);
+/**
+ * _puts - prints a string, followed by a new line,
+ * @str: pointer to the string to print
+ * Return: void
+*/
+
+void _puts(char *str)
+{
+int i = 0;
+while (str[i])
+{
+	_putchar(str[i]);
+	i++;
+}
+
+}
 
 /**
  * main - Entry point
@@ -20,7 +37,7 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		printf("Error\n");
+		_puts("Error\n");
 		return (98);
 	}
 	num1 = argv[1];
@@ -29,7 +46,7 @@ int main(int argc, char **argv)
 	{
 		if (!isdigit(num1[i]))
 		{
-			printf("Error\n");
+			_puts("Error\n");
 			return (98);
 		}
 	}
@@ -37,7 +54,7 @@ int main(int argc, char **argv)
 	{
 		if (!isdigit(num2[i]))
 		{
-			printf("Error\n");
+			_puts("Error\n");
 			return (98);
 		}
 	}
