@@ -29,8 +29,9 @@ if (dest == NULL)
 	{
 		src = "";
 	}
-for (dex = 0; *dest != '\0'; dex++)
+for (dex = 0; dest[dex]; dex++)
 		len++;
+
 
 	s =  malloc((len + 1) * sizeof(char));
 	if (s == NULL)
@@ -42,7 +43,7 @@ for (dex = 0; *dest != '\0'; dex++)
 		s[i] = dest[i];
 		i++;
 	}
-while (src[j] != '\0' && j < lenght)
+while (src[j] != '\0' && j < (int)lenght)
 {
 	s[i] = src[j];
 i++;
