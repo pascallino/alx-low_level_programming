@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-int multiply(char *num1, char *num2);
+void multiply(char *num1, char *num2);
 
 int main(int argc, char **argv) 
 {
-	int i;
-	int result;
 	char *num1;
 	char *num2;
+int i;
+
 	if (argc != 3) 
 	{
 		printf("Error\n");
@@ -33,12 +33,12 @@ int main(int argc, char **argv)
 			return (98);
 		}
 	}
-	result = multiply(num1, num2);
-	printf("%d\n", result);
+	multiply(num1, num2);
 	return (0);
 }
 
-int multiply(char *num1, char *num2) {
+void multiply(char *num1, char *num2) 
+{
 	int len1, j;
 	int len2, i;
 	int *result;
@@ -74,10 +74,9 @@ int multiply(char *num1, char *num2) {
 	}
 	final_result = 0;
 	for (j = i; j < len1 + len2; j++) 
-	
 	{
-		final_result = final_result * 10 + result[j];
+		putchar(result[j] + '0');
 	}
 	free(result);
-	return (final_result);
+	putchar('\n');
 }
