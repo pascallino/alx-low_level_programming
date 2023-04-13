@@ -20,6 +20,10 @@ char *string_nconcat(char *dest, char *src, unsigned int lenght)
 	i = 0;
 	n = lenght;
 	j = 0;
+if (dest == NULL)
+	{
+		dest = "";
+	}
 	if (src == NULL)
 	{
 		src = "";
