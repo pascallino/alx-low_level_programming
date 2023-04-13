@@ -44,16 +44,16 @@ int main(int argc, char **argv)
 	num2 = argv[2];
 	for (i = 0; num1[i] != '\0'; i++)
 	{
-		if (!isdigit(num1[i]))
-		{
+		if (!isdigit(num1[i]) && num1[i] != '-')
+        {
 			_puts("Error\n");
 			return (98);
 		}
 	}
 	for (i = 0; num2[i] != '\0'; i++)
 	{
-		if (!isdigit(num2[i]))
-		{
+		if (!isdigit(num2[i]) && num2[i] != '-')
+{
 			_puts("Error\n");
 			return (98);
 		}
