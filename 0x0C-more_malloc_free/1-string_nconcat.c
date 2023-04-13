@@ -28,10 +28,10 @@ if (dest == NULL)
 	{
 		src = "";
 	}
-for (dex = 0; dest[dex]; dex++)
+for (dex = 0; *dest != '\0'; dex++)
 		len++;
 
-	s =  malloc(((len + 1)) * sizeof(char));
+	s =  malloc((len + 1) * sizeof(char));
 	if (s == NULL)
 	{
 		return (NULL);
