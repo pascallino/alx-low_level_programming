@@ -12,15 +12,13 @@
  * Return: a pointer
  */
 
-char *string_nconcat(char *dest, char *src, unsigned int lenght)
+char *string_nconcat(char *dest, char *src, unsigned int n)
 {
-	int i, len, j, dex;
+int dex;
 	char *s;
+unsigned int len = n;
 
-	i = 0;
 dex = 0;
-	len = lenght;
-	j = 0;
 if (dest == NULL)
 	{
 		dest = "";
