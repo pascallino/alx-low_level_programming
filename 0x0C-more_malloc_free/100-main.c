@@ -32,7 +32,7 @@ void simple_print_buffer(char *buffer, unsigned int size)
 }
 
 /**
- * main - check the code for ALX School students.
+ * main - check the code for
  *
  * Return: Always 0.
  */
@@ -42,14 +42,13 @@ int main(void)
     int i;
 
     p = malloc(sizeof(char) * 10);
-  /*  p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);*/
-    p = _realloc(p, sizeof(char) * 10, sizeof(char));
+    p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);
     i = 0;
-    while (i < 10)
+    while (i < 98)
     {
-        p[i++] = 10;
+        p[i++] = 98;
     }
-    simple_print_buffer(p, 10);
+    simple_print_buffer(p, 98);
     free(p);
     return (0);
 }
