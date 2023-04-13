@@ -29,11 +29,7 @@ if (dest == NULL)
 		src = "";
 	}
 	len = strlen(src);
-	if (n > len)
-	{
-		n = len;
-	}
-	s =  malloc(((strlen(dest) + n + 1)) * sizeof(char));
+	s =  malloc(((strlen(dest) + len + 1)) * sizeof(char));
 	if (s == NULL)
 	{
 		return (NULL);
