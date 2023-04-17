@@ -10,8 +10,6 @@
 
 void print_dog(struct dog *d)
 {
-	float a;
-
 	if (d != NULL)
 	{
 	if (d->name == NULL)
