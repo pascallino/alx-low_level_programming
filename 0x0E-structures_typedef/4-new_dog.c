@@ -2,7 +2,7 @@
 #include "dog.h"
 
 int _strlen(char *str);
-char *_strcpy(char *dest, char *src);
+char *_strcpy(char *d, char *s);
 dog_t *new_dog(char *name, float age, char *owner);
 /**
  * _strlen - length of string
