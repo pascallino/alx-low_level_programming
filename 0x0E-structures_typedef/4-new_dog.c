@@ -32,11 +32,7 @@ free(newdog->name);
 	free(newdog);
 		return (NULL);
 }
-else
-{
-	strcpy(newdog->name, name);
-}
-newdog->age = age;
+	
 newdog->owner = malloc((strlen(owner) + 1) * sizeof(char));
 if (newdog->owner == NULL)
 {
@@ -44,9 +40,8 @@ free(newdog->owner);
 	free(newdog);
 		return (NULL);
 }
-else
-{
-	strcpy(newdog->owner, owner);
-}
+strcpy(newdog->name, name);
+newdog->age = age;
+strcpy(newdog->owner, owner);
 return (newdog);
 }
