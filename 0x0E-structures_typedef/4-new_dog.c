@@ -21,10 +21,10 @@ int _strlen(const char *str)
 }
 
 /**
- * _strcopy - return a copied string 
+ * _strcpy - return a copied string
  *
- * @s: string to copy to 
- * @d: destination 
+ * @s: string to copy to
+ * @d: destination
  *
  * Return: @d
 */
@@ -68,7 +68,7 @@ if (newdog->name == NULL)
 	free(newdog);
 		return (NULL);
 }
-	
+
 newdog->owner = malloc((_strlen(owner) + 1) * sizeof(char));
 if (newdog->owner == NULL)
 {
