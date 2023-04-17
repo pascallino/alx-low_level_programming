@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "dog.h"
 
-char *_strcopy(char *d, char *s);
+char *_strcpy(char *d, char *s);
 int _strlen(const char *str);
 
 /**
@@ -30,7 +30,7 @@ int _strlen(const char *str)
  * Return: @dest
 */
 
-char *_strcopy(char *d, char *s)
+char *_strcpy(char *d, char *s)
 {
 	int i;
 
