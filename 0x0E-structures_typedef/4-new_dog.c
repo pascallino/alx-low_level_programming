@@ -1,6 +1,9 @@
 #include <stdlib.h>
 #include "dog.h"
 
+char *_strcopy(char *d, char *s);
+int _strlen(const char *str);
+
 /**
  * _strlen - length of string
  *
@@ -21,8 +24,8 @@ int _strlen(const char *str)
 /**
  * _strcopy - return a copied string 
  *
- * @src: string to copy to 
- * @dest: destination 
+ * @s: string to copy to 
+ * @d: destination 
  *
  * Return: @dest
 */
