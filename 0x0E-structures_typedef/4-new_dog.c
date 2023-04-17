@@ -27,7 +27,7 @@ int _strlen(const char *str)
  * @s: string to copy to 
  * @d: destination 
  *
- * Return: @dest
+ * Return: @d
 */
 
 char *_strcpy(char *d, char *s)
