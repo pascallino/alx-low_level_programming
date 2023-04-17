@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include "dog.h"
 
-char *_strcpy(char *d, char *s);
-int _strlen(const char *str);
-
+int _strlen(char *str);
+char *_strcpy(char *dest, char *src);
+dog_t *new_dog(char *name, float age, char *owner);
 /**
  * _strlen - length of string
  *
@@ -60,14 +60,12 @@ if (name == NULL || age < 0 || owner == NULL)
 newdog =(dog_t *)malloc(sizeof(dog_t));
 if (newdog == NULL)
 {
-	free(newdog);
 return (NULL);
 }
 
 newdog->name = malloc((_strlen(name) + 1) * sizeof(char));
 if (newdog->name == NULL)
 {
-free(newdog->name);
 	free(newdog);
 		return (NULL);
 }
@@ -75,7 +73,7 @@ free(newdog->name);
 newdog->owner = malloc((_strlen(owner) + 1) * sizeof(char));
 if (newdog->owner == NULL)
 {
-free(newdog->owner);
+free(newdog->name);
 	free(newdog);
 		return (NULL);
 }
