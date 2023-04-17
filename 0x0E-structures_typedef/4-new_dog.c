@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "dog.h"
 
-int _strlen(char *str);
+int _strlen(const char *str);
 char *_strcpy(char *d, char *s);
 /**
  * _strlen - length of string
