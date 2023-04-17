@@ -7,6 +7,6 @@
  * ABS is an abbreviation for the toke
  */
 
-#define ABS(X) ((x) < 0 ? (-X) : (X))
+#define ABS(x) ((x) < 0 ? -(x) : (x))
 
 #endif
