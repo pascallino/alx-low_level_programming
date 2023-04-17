@@ -56,7 +56,7 @@ dog_t *newdog;
 if (name == NULL || age < 0 || owner == NULL)
 	return (NULL);
 
-newdog =(dog_t *)malloc(sizeof(dog_t));
+newdog = malloc(sizeof(dog_t));
 if (newdog == NULL)
 {
 return (NULL);
