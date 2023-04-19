@@ -21,10 +21,11 @@ if ((argc !=  4))
 	printf("Error\n");
 	exit(98);
 }
-
+t1 = atoi(argv[1]);
+t2 = atoi(argv[3]);
 op = argv[2];
-if ((*op == '/' && num2 == 0) ||
-	    (*op == '%' && num2 == 0))
+if ((*op == '/' && t2 == 0) ||
+	    (*op == '%' && t2 == 0))
 	{
 		printf("Error\n");
 		exit(100);
@@ -36,9 +37,6 @@ if (get_op_func(argv[2]) == NULL)
 printf("Error\n");
 exit (99);
 }
-t1 = atoi(argv[1]);
-t2 = atoi(argv[3]);
-
 result = (*ops)(t1, t2);
 printf("%d\n", result);
 return (0);
