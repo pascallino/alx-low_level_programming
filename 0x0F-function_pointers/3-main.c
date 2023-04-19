@@ -21,7 +21,7 @@ if ((argc !=  4) || (isdigit(*argv[1]) == 0 || isdigit(*argv[3]) == 0 ))
 	printf("Error\n");
 	exit (98);
 }
-if ((argv[2][0] != '\%' || argv[2][0] != '+' || argv[2][0] != '\/' || argv[2][0] != '-' || argv[2][0] != '*' ))
+if ((argv[2][0] != "\%" || argv[2][0] != '+' || argv[2][0] != "\/" || argv[2][0] != '-' || argv[2][0] != '*' ))
 {
 printf("Error\n");
 exit (99);
