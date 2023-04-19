@@ -24,7 +24,7 @@ if ((argc !=  4))
 	exit(98);
 }
 
-ops = get_op_func(&argv[2][0]);
+ops = get_op_func(argv[2]);
 if (!ops)
 {
 printf("Error\n");
