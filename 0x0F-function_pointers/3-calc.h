@@ -7,9 +7,9 @@ int op_mul(int a, int b);
 int op_div(int a, int b);
 int op_mod(int a, int b);
 /**
- * struct opt - Struct opt object 
+ * struct opt - Struct opt object
  *
- * @opt: The operator for calculation 
+ * @opt: The operator for calculation
  * @f: The function associated
  */
 typedef struct opt
