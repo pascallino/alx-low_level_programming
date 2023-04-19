@@ -25,7 +25,7 @@ op_t ops[] = {
 	{
 		if (strcmp(s, ops[i].op) == 0)
 			return (ops[i].f);
-	
+
 i++;
 }
 
