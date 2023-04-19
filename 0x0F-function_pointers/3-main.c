@@ -18,11 +18,12 @@ char *ch, *ch1;
 
 ch = "%";
 ch1 = "/";
-if ((argc !=  4) || (isdigit(*argv[1]) == 0 || isdigit(*argv[3]) == 0 ))
+if ((argc !=  4))
 {
 	printf("Error\n");
-	exit (98);
+	exit(98);
 }
+
 if ((strcmp(argv[2], ch) != 0 || argv[2][0] != '+' || strcmp(argv[2], ch1) != 0 || argv[2][0] != '-' || argv[2][0] != '*' ))
 {
 printf("Error\n");
