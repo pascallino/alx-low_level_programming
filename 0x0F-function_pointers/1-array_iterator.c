@@ -20,7 +20,7 @@ void array_iterator(int *arr, size_t size, void (*action)(int))
 	if (arr == NULL || action == NULL || !(size > 0))
 		return;
 
-	for(i = 0; i < size; i++)
+	for (i = 0; i < size; i++)
 		action(arr[i]);
 
 }
