@@ -14,19 +14,21 @@ int main(int argc, char *argv[])
 int t1, t2;
 int (*ops)(int, int);
 int result;
+char *ch;
 
+ch = "%";
 
 if ((argc !=  4) || (isdigit(*argv[1]) == 0 || isdigit(*argv[3]) == 0 ))
 {
 	printf("Error\n");
 	exit (98);
 }
-if ((argv[2][0] != '%' || argv[2][0] != '+' || argv[2][0] != '/'|| argv[2][0] != '-' || argv[2][0] != '*' ))
+if ((strcmp(argv[2], ch) != 0 || argv[2][0] != '+' || argv[2][0] != '/'|| argv[2][0] != '-' || argv[2][0] != '*' ))
 {
 printf("Error\n");
 exit (99);
 }
-if ((argv[2][0] == '/' || argv[2][0] == '%') && atoi(argv[3])  == 0)
+if ((argv[2][0] == '/' || (strcmp(argv[2], ch) != 0) && atoi(argv[3])  == 0)
 {
 printf("Error\n");                   exit (100);
 }
