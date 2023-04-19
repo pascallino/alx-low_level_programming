@@ -21,7 +21,7 @@ op_t ops[] = {
 	};
 	int i = 0;
 
-	for (; i < 5 ; i++)
+	while (i < 5)
 	{
 		if (strcmp(s, ops[i].op) == 0)
 			return (ops[i].f);
