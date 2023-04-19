@@ -30,7 +30,9 @@ int main(int argc, char *argv[])
 	code = (unsigned char *)main;
 	for (i = 0; i < num_bytes; i++)
 	{
-		printf("%02x", code[i]);
+		printf("%.2hhx", code[i]);
+		if (i < num_bytes - 1)
+			printf(" ");
 	}
 	printf("\n");
 	return (0);
