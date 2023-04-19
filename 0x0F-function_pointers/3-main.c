@@ -14,12 +14,21 @@ int main(int argc, char *argv[])
 int t1, t2;
 int (*ops)(int, int);
 int result;
+char *op;
 
 if ((argc !=  4))
 {
 	printf("Error\n");
 	exit(98);
 }
+
+op = argv[2];
+if ((*op == '/' && num2 == 0) ||
+	    (*op == '%' && num2 == 0))
+	{
+		printf("Error\n");
+		exit(100);
+	}
 
 ops = get_op_func(argv[2]);
 if (get_op_func(argv[2]) == NULL)
