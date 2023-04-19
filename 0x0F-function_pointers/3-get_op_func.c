@@ -21,7 +21,7 @@ op_to arithopt[] = {
 	};
 	int i = 0;
 
-	for(;i < 5; j++)
+	for(;i < 5; i++)
 	{
 		if (strcmp(s, arithopt[i].opt) == 0)
 			return (arithopt[i].f);
