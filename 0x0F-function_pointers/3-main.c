@@ -24,14 +24,15 @@ if ((argc !=  4))
 	exit(98);
 }
 
-if ((strcmp(argv[2], ch) != 0 || argv[2][0] != '+' || strcmp(argv[2], ch1) != 0 || argv[2][0] != '-' || argv[2][0] != '*' ))
+ops = get_op_func(&argv[2][0]);
+if (!ops)
 {
 printf("Error\n");
 exit (99);
 }
 t1 = atoi(argv[1]);
 t2 = atoi(argv[3]);
-ops = get_op_func(&argv[2][0]);
+
 result = (*ops)(t1, t2);
 printf("%d\n", result);
 return (0);
