@@ -22,7 +22,7 @@ if ((argc !=  4))
 }
 
 ops = get_op_func(argv[2]);
-if (get_op_func(op) == NULL)
+if (get_op_func(argv[2]) == NULL)
 {
 printf("Error\n");
 exit (99);
