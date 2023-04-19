@@ -27,5 +27,5 @@ op_to arithopt[] = {
 			return (arithopt[i].f);
 	}
 
-	return (0);
+	return (NULL);
 }
