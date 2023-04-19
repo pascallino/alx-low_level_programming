@@ -11,7 +11,7 @@
 
 int (*get_op_func(char *s))(int, int)
 {
-op_t arithopt[] = {
+op_t ops[] = {
 	{ "+", op_add },
 	{ "-", op_sub },
 	{ "*", op_mul },
@@ -23,8 +23,8 @@ op_t arithopt[] = {
 
 	for (; i < 5 ; i++)
 	{
-		if (strcmp(s, arithopt[i].op) == 0)
-			return (arithopt[i].f);
+		if (strcmp(s, ops[i].op) == 0)
+			return (ops[i].f);
 	}
 
 	return (NULL);
