@@ -14,10 +14,7 @@ int main(int argc, char *argv[])
 int t1, t2;
 int (*ops)(int, int);
 int result;
-char *ch, *ch1;
 
-ch = "%";
-ch1 = "/";
 if ((argc !=  4))
 {
 	printf("Error\n");
