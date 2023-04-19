@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include "3-calc.h"
 
+/**
+  * get_op_func - get opt func 
+  * @s: character 
+  *
+  * Return: function 
+  */
+
 int (*get_op_func(char *s))(int, int)
 {
 op_to arithopt[] = {
