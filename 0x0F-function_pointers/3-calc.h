@@ -7,7 +7,7 @@
  * @opt: The operator for calculation
  * @f: The function associated
  */
-typedef struct opt
+typedef struct opt1
 {
 	char *opt;
 	int (*f)(int x, int y);
