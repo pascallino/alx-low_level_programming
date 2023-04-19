@@ -19,12 +19,12 @@ op_to arithopt[] = {
 	{ "%", op_mod },
 	{ NULL, NULL }
 	};
-	int j = 0;
+	int i = 0;
 
-	for(;j < 5; j++)
+	for(;i < 5; j++)
 	{
-		if (strcmp(s, arithopt[j].opt) == 0)
-			return (arithopt[j].f);
+		if (strcmp(s, arithopt[i].opt) == 0)
+			return (arithopt[i].f);
 	}
 
 	return (NULL);
