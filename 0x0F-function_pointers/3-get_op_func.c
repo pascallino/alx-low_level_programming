@@ -13,12 +13,10 @@ op_to arithopt[] = {
 	};
 	int j = 0;
 
-	while (j < 5)
+	for(;j < 5; j++)
 	{
 		if (strcmp(s, arithopt[j].opt) == 0)
 			return (arithopt[j].f);
-
-		j++;
 	}
 
 	return (NULL);
