@@ -11,23 +11,20 @@
  */
 void print_all(const char * const format, ...)
 {
-	int num, i, sepind;
+	int i, sepind;
 	va_list args;
 	const char *str;
-	int arg;
 	char *s;
-	double  argf;
 
 	i = 0;
 	va_start(args, format);
 	str = format;
-	while (str != NULL && *str)
+while (str != NULL && str[i] != '\0')
 	{
 		switch (*str)                        {
 		case 'i':
 		{
-			num = va_arg(args, int);
-			printf("%d", num);
+			printf("%d", va_arg(args, int));
 			sepind = 0;
 			break;
 		}
@@ -42,15 +39,13 @@ void print_all(const char * const format, ...)
 		}
 		case 'c':
 		{
-			arg = va_arg(args, int);
-			printf("%c", arg);
+			printf("%c", va_arg(args, int));
 			sepind = 0;
 			break;
 		}
 		case 'f':
 		{
-			argf = va_arg(args, double);
-			printf("%f", argf);
+			printf("%f", va_arg(args, double));
 			sepind = 0;
 			break;
 		}
