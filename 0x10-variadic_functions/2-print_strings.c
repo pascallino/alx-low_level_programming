@@ -17,15 +17,12 @@ void print_strings(const char *sep, const unsigned int n, ...)
 	char *str;
 
 	va_start(args, n);
-if (sep == NULL)
-sep = "";
-
 	for (i = 0; i < n; i++)
 	{
 		str = va_arg(args, char *);
 		if (str == NULL)
 		{
-			str = "nil";
+			str = "(nil)";
 		}
 
 		printf("%s%s", i == 0 ? "" : sep != NULL ? sep : "", str);
