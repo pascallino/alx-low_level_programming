@@ -57,7 +57,6 @@ while (format != NULL && format[i] != '\0')
 		{
 			printf(", ");
 		}
-		format++;
 		i++;
 	}
 	va_end(args);
