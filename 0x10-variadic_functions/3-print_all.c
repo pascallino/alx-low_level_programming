@@ -13,15 +13,13 @@ void print_all(const char * const format, ...)
 {
 	int i, sepind;
 	va_list args;
-	const char *str;
 	char *s;
 
 	i = 0;
 	va_start(args, format);
-	str = format;
-while (str != NULL && str[i] != '\0')
+while (format != NULL && format[i] != '\0')
 	{
-		switch (*str)                        {
+		switch (*format)                        {
 		case 'i':
 		{
 			printf("%d", va_arg(args, int));
@@ -55,11 +53,11 @@ while (str != NULL && str[i] != '\0')
 			break;
 		}
 		}
-		if (str[i + 1] != '\0' && sepind == 0)
+		if (format[i + 1] != '\0' && sepind == 0)
 		{
 			printf(", ");
 		}
-		str++;
+		format++;
 		i++;
 	}
 	va_end(args);
