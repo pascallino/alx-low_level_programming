@@ -17,8 +17,8 @@ void print_strings(const char *sep, const unsigned int n, ...)
 	char *str;
 
 	va_start(args, n);
-if (*sep == NULL)
-return ();
+if (sep == NULL)
+sep = "";
 
 	for (i = 0; i < n; i++)
 	{
