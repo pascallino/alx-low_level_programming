@@ -16,16 +16,13 @@ if (h == NULL)
 	return (0);
 
 
-while (curr != NULL)
+while (curr)
 {
 	if (curr->str == NULL)
-	{
 		printf("[0] %s\n", "(nil)");
-		curr = curr->next;
-	i++;
-	continue;
-	}
-	printf("[%d] %s\n", curr->len, curr->str);
+	else
+		printf("[%d] %s\n", curr->len, curr->str);
+
 	curr = curr->next;
 	i++;
 }
