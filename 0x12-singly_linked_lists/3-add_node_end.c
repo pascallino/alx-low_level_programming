@@ -4,11 +4,11 @@
 #include <stdlib.h>
 
 /**
- * addnode - Add a node
+ * add_node_end - Add a node
  * @new_data: pointer to head node
  * Return: Head node
  */
-list_t  *addNode(list_t** head_ref, const char *new_data)
+list_t *addNode(list_t** head_ref, const char *new_data)
 {
 	/* Allocate memory for new node*/
 	list_t *new_node;
@@ -59,8 +59,9 @@ last->next = new_node;
  * Return: Number of nodes
 */
 
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 
 return (addNode(head, str));;
+
 }
