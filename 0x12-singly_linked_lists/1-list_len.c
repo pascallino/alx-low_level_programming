@@ -17,7 +17,7 @@ if (h == NULL)
 while (curr != NULL)
 {
 	curr = curr->next;
-	i++;;
+	i++;
 }
 /*printf("-> %d elements\n", i);*/
 return (i);
