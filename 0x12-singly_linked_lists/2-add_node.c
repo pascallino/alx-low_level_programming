@@ -4,8 +4,9 @@
 #include <stdlib.h>
 
 /**
- * addnode - Add a node
+ * addNode - Add a node
  * @new_data: pointer to head node
+ * Description: add new node
  * @head_ref: ===
  * Return: Head node
  */
