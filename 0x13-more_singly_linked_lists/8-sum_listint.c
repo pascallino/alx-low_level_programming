@@ -3,30 +3,22 @@
 #include "lists.h"
 
 /**
- * get_nodeint_at_index - find node using index
+ * sum_listint - sum all nodes
  * @head: pointer to head node
- * @index: position of the node
  * Return: N
  */
-listint_t *get_nodeint_at_index(listint_t *head,
-		unsigned int index)
+int sum_listint(listint_t *head)
 {
 	unsigned int n = 0;
 
-	if (!(head) || !(index >= n))
-		return (NULL);
-	if (n == index)
-	       return (head);	
+	if (!(head))
+		return (0);
 
-	
 	while (head)
 	{
-	head = head->next;
-	n = n + 1;
-	if ( n == index)
-		break;
-
+		n = n + head->n;
+		head = head->next;
 	}
 
-	return (head);
+	return (n);
 }

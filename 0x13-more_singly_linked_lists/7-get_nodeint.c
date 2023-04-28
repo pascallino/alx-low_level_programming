@@ -16,15 +16,15 @@ listint_t *get_nodeint_at_index(listint_t *head,
 	if (!(head) || !(index >= n))
 		return (NULL);
 	if (n == index)
-	       return (head);	
+		return (head);
 
-	
+
 	while (head)
 	{
-	head = head->next;
-	n = n + 1;
-	if ( n == index)
-		break;
+		head = head->next;
+		n = n + 1;
+		if (n == index)
+			break;
 
 	}
 
