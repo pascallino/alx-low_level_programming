@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * free_listint22 - free allocsted space
+ * free_listint2 - free allocsted space
  * @head: pointer to head node
  * Return: Number of nodes
  */
@@ -11,7 +11,7 @@ void free_listint2(listint_t **head)
 {
 	listint_t *temp;
 
-	if (head == NULL)
+	if (*head == NULL)
 		return;
 
 	while (*head)
