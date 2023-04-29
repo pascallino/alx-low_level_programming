@@ -17,12 +17,12 @@ size_t print_listint_safe(const listint_t *head)
 		{
 			if (head == visited[i])
 			{
-				printf("-> [%p] %d\n", (void *)head, head->n);
+printf("-> [%p] %d\n", (void *)head, head->n);
 				return (count);
 			}
 		}
 		visited[count++] = head;
-		printf("[%p] %d\n", (void *)head, head->n);
+printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 		if (count >= 1024)
 		{
