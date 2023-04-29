@@ -35,5 +35,6 @@ listint_t *add_node_end(listint_t **head, const int str);
 listint_t *addNode(listint_t **head_ref, const int new_data);
 size_t print_listint_safe(const listint_t *head);
 size_t free_listint_safe(listint_t **h);
+listint_t *reverse_listint(listint_t **head);
 
 #endif /* LIST_H */
