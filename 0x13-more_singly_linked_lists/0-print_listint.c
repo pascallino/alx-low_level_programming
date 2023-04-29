@@ -15,13 +15,13 @@ const listint_t *curr = h;
 
 while (curr)
 {
+	i++;
 	if (curr->n == 0)
 		printf("0\n");
 	else
 		printf("%d\n", curr->n);
 
 	curr = curr->next;
-	i++;
 }
 /*printf("-> %d elements\n", i);*/
 return (i);
