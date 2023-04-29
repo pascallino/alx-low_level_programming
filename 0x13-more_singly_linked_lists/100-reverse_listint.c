@@ -14,12 +14,7 @@ listint_t *reverse_listint(listint_t **head)
 	/* Allocate memory for new node*/
 	listint_t *prev = NULL;
 	listint_t *next = prev;
-
-	if (*head == NULL || head == NULL)
-		return (NULL);
-	if ((*head)->next == NULL)
-		return (NULL);
-
+	
 	/*	if (new_data == NULL)*/
 	/*	{*/
 	/*		free(new_node);*/
