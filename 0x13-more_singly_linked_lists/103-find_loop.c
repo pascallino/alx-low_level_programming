@@ -1,12 +1,13 @@
 #include "lists.h"
 /**
- * find_listint_loop - tortoise and hare speed comparism, but we need to find the loop
+ * find_listint_loop - tortoise and hare, but we need to find the loop
  * @head: Pointer to the head node
  * Return: address of the node where the loop starts.
  */
 listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *slow = head, *fast = head;
+
 	while (slow && fast && fast->next)
 	{
 		slow = slow->next;
