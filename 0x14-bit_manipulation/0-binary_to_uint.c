@@ -36,9 +36,9 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	}
 
-	while (b[i] != '\0')
+	while (b[i] == '0' || b[i] == '1')
 	{
-		if  (b[i] < 48 && b[i] > 49)
+		if  (b[i] != '1' || b[i] != '0')
 		{
 			return (0);
 		}
@@ -46,7 +46,7 @@ unsigned int binary_to_uint(const char *b)
 	}
 	i--;
 	val = atoi(b);
-	while (val  > 0)
+	while (val  > 0 && i >= 0)
 	{
 		num = num + ((val % 10)  *  _pow(2, n));
 		val = val / 10;
