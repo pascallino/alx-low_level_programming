@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * _pow_recursion - Returns the value of x raised to the power of y.
+ * _pow - Returns the value of x raised to the power of y.
  * @x: The number to be raised
  * @y: The power
  * Return: The value of x raised to the power of y.
@@ -27,16 +27,23 @@ int _pow(int x, int y)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int num = 0;
-	int len = 0;
-	if (b[len] == '\0')
+	unsigned int result = 0;
+	int i = 0;
+
+	if (b == NULL)
 		return (0);
-	while ((b[len] == '0') || (b[len] == '1'))
+
+	for (i = 0; b[i] != '\0'; i++)
 	{
-		num <<= 1;
-		num += b[len] - '0';
-		len++;
+		if (b[i] == '0' || b[i] == '1')
+		{
+			result = result << 1;
+			if (b[i] == '1')
+				result = result | 1;
+		}
+		else
+			return (0);
 	}
-	return (num);
+	return (result);
 }
 
