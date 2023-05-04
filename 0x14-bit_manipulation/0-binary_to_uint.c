@@ -28,29 +28,14 @@ int _pow(int x, int y)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int num = 0;
-	int n = 0, i = 0;
-	unsigned int val;
-
-	if (b[i] == '\0')
-	{
+	int len = 0;
+	if (b[len] == '\0')
 		return (0);
-	}
-
-	while (b[i] == '0' || b[i] == '1')
+	while ((b[len] == '0') || (b[len] == '1'))
 	{
-		if  (b[i] != '1' || b[i] != '0')
-		{
-			return (0);
-		}
-		i++;
-	}
-	i--;
-	val = atoi(b);
-	while (val  > 0 && i >= 0)
-	{
-		num = num + ((val % 10)  *  _pow(2, n));
-		val = val / 10;
-		n++;
+		num <<= 1;
+		num += b[len] - '0';
+		len++;
 	}
 	return (num);
 }
