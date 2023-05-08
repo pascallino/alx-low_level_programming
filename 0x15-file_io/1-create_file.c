@@ -1,4 +1,5 @@
 #include <sys/types.h>
+#include <string.h>
 #include <sys/stat.h>
 #include "main.h"
 
