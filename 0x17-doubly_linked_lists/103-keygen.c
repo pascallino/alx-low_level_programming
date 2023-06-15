@@ -6,15 +6,13 @@
  * main - =============
  * @argc: arg for the username and key
  * @argv: An array of strings args
- *
  * Return: ======
  */
 int main(int argc, char *argv[])
 {
 	char password[7], *codex;
 	int len = strlen(argv[1]), i, tmp;
-
-  (void)argc;
+	(void)argc;
 	codex = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
 
 	tmp = (len ^ 59) & 63;
