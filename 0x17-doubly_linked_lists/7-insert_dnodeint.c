@@ -55,7 +55,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
 		*head = new;
 		return (new);
 	}
-	else if  (*head != NULL && i == 1 && index == 0)
+	else if  (*head != NULL && index == 0)
 	{
 		new->next = *head;
 		new->prev = NULL;
