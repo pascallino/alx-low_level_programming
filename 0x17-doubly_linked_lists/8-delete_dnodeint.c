@@ -4,7 +4,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 /**
  * delete_dnodeint_at_index - =================
  * @head: ===================
- * @idx: =================
+ * @index: =================
  * Return: ===========
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
