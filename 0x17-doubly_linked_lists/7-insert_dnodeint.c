@@ -34,6 +34,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
 	dlistint_t *temp, *new = NULL;
 	int i = 0, index = idx;
 
+	if (*head == NULL || head == NULL)
+		return (NULL);
 	while (len != NULL)
 	{
 		len = len->next;
