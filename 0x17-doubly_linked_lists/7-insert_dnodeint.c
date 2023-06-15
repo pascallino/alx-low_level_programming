@@ -34,17 +34,18 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
 	dlistint_t *temp, *new = NULL;
 	int i = 0, index = idx;
 
-	while (len)
+	while (len != NULL)
 	{
 		len = len->next;
 		i++;
 	}
+	i--;
 	if (index < 0 || index > i)
 		return (NULL);
 	new = mallocNodeInt(new, n);
 	if (new == NULL)
 		return (NULL);
-	if (curr == NULL)
+	if (curr == NULL && index == 0)
 	{
 		*head = new;
 		return (*head);
