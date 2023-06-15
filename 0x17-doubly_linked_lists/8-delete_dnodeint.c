@@ -30,19 +30,21 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int idx)
 		len = len->next;
 		i++;
 	}
+	if (i == 0)
+		return (-1)
 	if (index < 0 || index > i)
 		return (-1);
 	if (curr == NULL)
 	{
 		return (-1);
 	}
-	if  (*head != NULL && i == 1 && index == 0) /* this will only work for 100 only */
+	if  (*head && i == 1 && index == 0) /* this will only work for 100 only */
 	{
 		free(curr);
 		*head = NULL;
 		return (1);
 	}
-	else if (i >= 0 && index == 0)
+	else if (i > 0 && index == 0)
 	{
 	temp = curr;
 	curr = curr->next;
