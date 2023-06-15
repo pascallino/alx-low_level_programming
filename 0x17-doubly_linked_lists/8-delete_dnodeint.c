@@ -50,6 +50,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int idx)
 		temp = curr;
 		curr = curr->next;
 		i++;
+		if (i == index)
+			break;
 	}
 	target = curr->next;
 	temp->next = target;
