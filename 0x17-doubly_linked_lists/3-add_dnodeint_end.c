@@ -2,7 +2,7 @@
 dlistint_t *malllocNodeend(dlistint_t *node, const int data);
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
 /**
- * mallocNode - ==========
+ * mallocNodeend - ==========
  * @node: ===========
  * @data: ==========
  * Return: int
@@ -20,7 +20,7 @@ dlistint_t *mallocNodeend(dlistint_t *node, const int data)
 	return (node);
 }
 /**
- * add_dnodeint - =================
+ * add_dnodeint_end - =================
  * @head: ===================
  * @n: =================
  * Return: ===========

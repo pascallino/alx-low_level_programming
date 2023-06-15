@@ -1,8 +1,9 @@
 #include "lists.h"
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 /**
- * print_dlistint - ==========
- * @h: ===========
+ * get_dnodeint_at_index - ==========
+ * @head: ===========
+ * @index: =========
  * Return: int
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)

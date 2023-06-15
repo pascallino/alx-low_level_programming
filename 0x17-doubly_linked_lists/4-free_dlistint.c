@@ -1,8 +1,8 @@
 #include "lists.h"
 void free_dlistint(dlistint_t *head);
 /**
- * print_dlistint - ==========
- * @h: ===========
+ * free_dlistint - ==========
+ * @head: ===========
  * Return: int
  */
 void free_dlistint(dlistint_t *head)

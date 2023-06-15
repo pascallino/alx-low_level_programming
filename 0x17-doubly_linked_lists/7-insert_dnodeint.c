@@ -1,6 +1,7 @@
 #include "lists.h"
 dlistint_t *mallocNodeInt(dlistint_t *node, const int data);
-dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n);
+dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
+		unsigned int idx, int n);
 /**
  * mallocNodeInt - ==========
  * @node: ===========
@@ -22,17 +23,16 @@ dlistint_t *mallocNodeInt(dlistint_t *node, const int data)
 /**
  * insert_dnodeint_at_index - =================
  * @head: ===================
+ * @idx: ===================
  * @n: =================
- * Return: ===========
+ * Return: =========
  */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **head,
+		unsigned int idx, int n)
 {
-	dlistint_t *curr = *head;
-	dlistint_t *len = *head;
-	dlistint_t *temp;
-	dlistint_t *new = NULL;
-	int i = 0;
-	int index = idx;
+	dlistint_t *curr = *head, *len = *head;
+	dlistint_t *temp, *new = NULL;
+	int i = 0, index = idx;
 
 	while (len)
 	{
@@ -49,11 +49,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
 		*head = new;
 		return (*head);
 	}
-	/* NULL */
-	/* 100 -> NULL */
-	/* 100 -> 200 -> NULL */
-	/* 100 -> 200 -> 300 -> NULL */
-	if  (*head == NULL && i == 0 && index == 0) /* this will only work for 100 only */
+	if  (*head == NULL && i == 0 && index == 0)
 	{
 		*head = new;
 		return (new);
