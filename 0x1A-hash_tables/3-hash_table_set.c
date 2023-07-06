@@ -14,23 +14,22 @@ hash_node_t *ht_CreateItem(const char *key, const char *value)
 	valuecpy = strdup(value);
 	if (valuecpy == NULL)
 		return (NULL);
+	free(valuecpy);
 	if (key == NULL)
 		return (NULL);
 	hash_node = malloc(sizeof(hash_node_t));
 	if (hash_node == NULL)
 	{
-		free(valuecpy);
 		return (NULL);
 	}
 	hash_node->key = strdup(key);
 	if (hash_node->key == NULL)
 	{
 		free(hash_node);
-		free(valuecpy);
 		return (NULL);
 	}
 
-	hash_node->value = valuecpy;
+	hash_node->value = strdup(value);
 	hash_node->next = NULL;
 	return (hash_node);
 
@@ -49,9 +48,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht == NULL || value == NULL || key == NULL || *key == '\0')
 		return (0);
-	htnode = ht_CreateItem(key, value);
-	if (htnode == NULL)
-		return (0);
 	index = key_index((unsigned char *)key, ht->size);
 
 	for (i = index; ht->array[i]; i++)
@@ -63,6 +59,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			return (1);
 		}
 	}
+	htnode = ht_CreateItem(key, value);
+	if (htnode == NULL)
+		return (0);
 	htnode->next = ht->array[index];
 	ht->array[index] = htnode;
 	return (1);
