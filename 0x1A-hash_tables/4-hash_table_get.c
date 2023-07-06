@@ -21,6 +21,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		{
 			return (ht->array[i]->value);
 		}
+		return(NULL);
 	}
 	return (NULL);
 
