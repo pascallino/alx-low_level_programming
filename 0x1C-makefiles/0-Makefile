@@ -1,0 +1,13 @@
+#This is the gcc stored in a macro CC
+CC=gcc
+CFLAGS= -c
+all: school
+
+school: main.o school.o
+	$(CC) main.o school.o -o school
+
+main.o:main.c
+	$(CC) $(CFLAGS) main.c
+
+school.o:school.c
+	$(CC) $(CFLAGS) school.c
