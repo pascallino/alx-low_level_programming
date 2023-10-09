@@ -1,0 +1,15 @@
+Searching in array: 0, 1, 2, 5, 5, 6, 6, 7, 8, 9
+Searching in array: 6, 6, 7, 8, 9
+Searching in array: 8, 9
+Found 8 at index: 8
+
+Searching in array: 0, 1, 2, 5, 5, 6, 6, 7, 8, 9
+Searching in array: 0, 1, 2, 5, 5
+Searching in array: 5, 5
+Found 5 at index: 3
+
+Searching in array: 0, 1, 2, 5, 5, 6, 6, 7, 8, 9
+Searching in array: 6, 6, 7, 8, 9
+Searching in array: 8, 9
+Searching in array: 9
+Found 999 at index: -1
