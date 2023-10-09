@@ -32,11 +32,15 @@ double _sqrt(double x)
  */
 int jump_search(int *array, size_t size, int value)
 {
-	size_t step = _sqrt(size);
+	size_t step;
 	size_t prev = 0;
 	size_t j;
 	int i = 0;
 
+	if (array == NULL || size == 0)
+		return (-1);
+
+	step = _sqrt(size);
 	while (array[prev] < value && prev < size)
 	{
 		printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
