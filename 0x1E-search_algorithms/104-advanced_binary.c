@@ -53,14 +53,16 @@ int b_search(int *array, size_t low, size_t high, int value)
 		if (mid == low || array[mid - 1] != value)
 			return ((int)mid);
 		/*Continue searching in the left subarray*/
-		else
-			return (b_search(array, low, mid, value));
+		/*else*/
+			/*return (b_search(array, low, mid, value));*/
 	}
 	/*If the mid element is greater*/
 	/* than the value, search in the left subarray*/
-	else if (array[mid] > value)
+	if (array[mid] >= value)
 	{
-		return (b_search(array, low, mid - 1, value));
+
+		return (b_search(array, low, mid, value));
+		/*return (b_search(array, low, mid - 1, value));*/
 	}
 	/*If the mid element is less than the value, search in the right subarray*/
 	else
