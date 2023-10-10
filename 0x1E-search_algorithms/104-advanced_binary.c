@@ -33,7 +33,7 @@ int b_search(int *array, size_t low, size_t high, int value)
 	size_t i;
 	size_t mid = low + (high - low) / 2;
 
-	if (low > high)
+	if (high < low)
 		return (-1);
 
 	/*Print the current subarray*/
